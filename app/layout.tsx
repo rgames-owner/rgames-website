@@ -13,6 +13,7 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rgames.co.kr'),
   title: 'R GAMES | 알 게임즈',
   description:
     '알 게임즈(R Games)는 소규모 팀의 모바일 게임 스튜디오입니다. Hunter Tower: Offline IDLE RPG 개발사.',
