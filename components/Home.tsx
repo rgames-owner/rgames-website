@@ -110,7 +110,7 @@ export default function Home() {
             <div>
               <dt>Email</dt>
               <dd>
-                <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+                <a href={`mailto:${CONTACT.csEmail}`}>{CONTACT.csEmail}</a>
               </dd>
             </div>
             <div>

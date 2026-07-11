@@ -52,7 +52,8 @@ export interface Dict {
 }
 
 export const CONTACT = {
-  email: 'rgames.owner@gmail.com',
+  email: 'owner@rgames.co.kr',
+  csEmail: 'cs.team@rgames.co.kr',
   tel: '010-9539-9513',
   telIntl: '+82-10-9539-9513',
   googlePlay: 'https://play.google.com/store/apps/details?id=com.rgames.huntertower',
@@ -101,7 +102,7 @@ export const DICT: Record<Lang, Dict> = {
     footTerms: '이용약관',
     footLegal1: '알 게임즈 (R Games) | 대표: 명석 | 사업자등록번호: 680-20-02554',
     footLegal2: '주소: 인천광역시 연수구 하모니로 158, 317-C71 (우 21998)',
-    footLegal3: '이메일: rgames.owner@gmail.com | 전화: 010-9539-9513',
+    footLegal3: '이메일: owner@rgames.co.kr | 전화: 010-9539-9513',
     privacyTitle: '개인정보처리방침',
     termsTitle: '이용약관',
     effectiveDate: '시행일: 2026년 7월 11일',
@@ -115,7 +116,7 @@ export const DICT: Record<Lang, Dict> = {
       { k: '대표자', v: '명석' },
       { k: '사업자등록번호', v: '680-20-02554' },
       { k: '주소', v: '인천광역시 연수구 하모니로 158, 317-C71 (우 21998)' },
-      { k: '이메일', v: 'rgames.owner@gmail.com' },
+      { k: '이메일', v: 'owner@rgames.co.kr' },
       { k: '전화', v: '010-9539-9513' },
       { k: '주요 사업', v: '모바일 게임 개발 및 서비스' },
     ],
@@ -154,7 +155,7 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '9. 개인정보 보호책임자',
-        b: '개인정보 보호책임자: 명석 (대표)\n이메일: rgames.owner@gmail.com\n전화: 010-9539-9513\n주소: 인천광역시 연수구 하모니로 158, 317-C71',
+        b: '개인정보 보호책임자: 명석 (대표)\n이메일: owner@rgames.co.kr\n전화: 010-9539-9513\n주소: 인천광역시 연수구 하모니로 158, 317-C71',
       },
       {
         h: '10. 고지의 의무',
@@ -200,7 +201,7 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '부칙',
-        b: '본 약관은 2026년 7월 11일부터 시행됩니다.\n문의: rgames.owner@gmail.com',
+        b: '본 약관은 2026년 7월 11일부터 시행됩니다.\n문의: cs.team@rgames.co.kr',
       },
     ],
   },
@@ -235,7 +236,7 @@ export const DICT: Record<Lang, Dict> = {
     footTerms: 'Terms of Service',
     footLegal1: 'R Games | CEO: Myeongseok | Business Registration No. 680-20-02554',
     footLegal2: 'Address: 317, 158 Harmony-ro, Yeonsu-gu, Incheon, 21998, Republic of Korea',
-    footLegal3: 'Email: rgames.owner@gmail.com | Tel: +82-10-9539-9513',
+    footLegal3: 'Email: owner@rgames.co.kr | Tel: +82-10-9539-9513',
     privacyTitle: 'Privacy Policy',
     termsTitle: 'Terms of Service',
     effectiveDate: 'Effective date: July 11, 2026',
@@ -249,7 +250,7 @@ export const DICT: Record<Lang, Dict> = {
       { k: 'CEO', v: 'Myeongseok' },
       { k: 'Business Reg. No.', v: '680-20-02554' },
       { k: 'Address', v: '317, 158 Harmony-ro, Yeonsu-gu, Incheon, 21998, Republic of Korea' },
-      { k: 'Email', v: 'rgames.owner@gmail.com' },
+      { k: 'Email', v: 'owner@rgames.co.kr' },
       { k: 'Tel', v: '+82-10-9539-9513' },
       { k: 'Business', v: 'Mobile game development and publishing' },
     ],
@@ -288,7 +289,7 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '9. Privacy Officer',
-        b: 'Privacy Officer: Myeongseok (CEO)\nEmail: rgames.owner@gmail.com\nTel: +82-10-9539-9513\nAddress: 317, 158 Harmony-ro, Yeonsu-gu, Incheon, Republic of Korea',
+        b: 'Privacy Officer: Myeongseok (CEO)\nEmail: owner@rgames.co.kr\nTel: +82-10-9539-9513\nAddress: 317, 158 Harmony-ro, Yeonsu-gu, Incheon, Republic of Korea',
       },
       {
         h: '10. Changes to This Policy',
@@ -334,7 +335,7 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: 'Addendum',
-        b: 'These Terms are effective as of July 11, 2026.\nContact: rgames.owner@gmail.com',
+        b: 'These Terms are effective as of July 11, 2026.\nContact: cs.team@rgames.co.kr',
       },
     ],
   },
