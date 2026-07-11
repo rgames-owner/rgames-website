@@ -1,0 +1,644 @@
+:root {
+  --yellow: #f6d67c;
+  --ink: #1b1b1b;
+  --cream: #fffbf0;
+  --muted: #4a4a4a;
+  --gold: #8a7a4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-noto), "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b98900;
+}
+
+h1,
+h2,
+h3,
+.display {
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-weight: 400;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 251, 240, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--ink);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo span {
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+.header-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.header-nav a {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.lang-btn {
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-size: 14px;
+  padding: 7px 16px;
+  background: var(--ink);
+  color: var(--yellow);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background: #3a3a3a;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--yellow);
+  border-bottom: 2px solid var(--ink);
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+  padding-top: 72px;
+  padding-bottom: 64px;
+}
+
+.hero-copy {
+  flex: 1 1 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-badge {
+  align-self: flex-start;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 56px;
+  line-height: 1.15;
+  text-wrap: pretty;
+}
+
+.hero-desc {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 480px;
+  text-wrap: pretty;
+}
+
+.hero-egg {
+  flex: 0 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-egg img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  animation: eggFloat 4s ease-in-out infinite;
+}
+
+@keyframes eggFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.btn-primary {
+  align-self: flex-start;
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-size: 17px;
+  padding: 13px 28px;
+  background: var(--ink);
+  color: var(--yellow);
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 rgba(27, 27, 27, 0.25);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 rgba(27, 27, 27, 0.25);
+  color: var(--yellow);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding-top: 72px;
+}
+
+.section-title {
+  margin: 0 0 32px;
+  font-size: 36px;
+}
+
+.section-desc {
+  margin: -20px 0 32px;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 100%;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+/* ---------- Game card ---------- */
+.card {
+  background: #ffffff;
+  border: 2px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: 6px 6px 0 var(--yellow);
+  overflow: hidden;
+}
+
+.game-head {
+  padding: 36px 36px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.game-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  border: 2px solid var(--ink);
+}
+
+.game-info {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-genre {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: var(--yellow);
+  border-radius: 999px;
+}
+
+.game-title {
+  margin: 0;
+  font-size: 28px;
+}
+
+.game-desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.features {
+  padding: 0 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.feature {
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feature strong {
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.feature span {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.shots {
+  padding: 24px 36px 0;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+}
+
+.shots img {
+  height: 200px;
+  border-radius: 14px;
+  border: 2px solid var(--ink);
+  flex-shrink: 0;
+}
+
+.stores {
+  padding: 28px 36px 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.store-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 22px;
+  background: var(--ink);
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.store-btn:hover {
+  background: #3a3a3a;
+  color: #ffffff;
+}
+
+.store-btn small {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.store-btn b {
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.store-btn.disabled {
+  background: #ffffff;
+  color: #9a9a9a;
+  border: 2px dashed #c9c9c9;
+  pointer-events: none;
+}
+
+/* ---------- Upcoming ---------- */
+.upcoming {
+  margin-top: 28px;
+  background: var(--cream);
+  border: 2px dashed var(--ink);
+  border-radius: 24px;
+  padding: 32px 36px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+}
+
+.upcoming-egg {
+  width: 84px;
+  height: 96px;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  border-radius: 50% 50% 50% 50% / 58% 58% 42% 42%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-size: 40px;
+}
+
+.upcoming-info {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upcoming-badge {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  background: var(--ink);
+  color: var(--yellow);
+  border-radius: 999px;
+}
+
+.upcoming-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.upcoming-desc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 560px;
+  text-wrap: pretty;
+}
+
+/* ---------- Company ---------- */
+.company-table {
+  padding: 12px 36px;
+}
+
+.company-row {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ede6d4;
+}
+
+.company-row:last-child {
+  border-bottom: none;
+}
+
+.company-row dt {
+  flex: 0 0 160px;
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 14px;
+  margin: 0;
+}
+
+.company-row dd {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Contact ---------- */
+.contact-section {
+  padding-bottom: 88px;
+}
+
+.contact-card {
+  background: var(--ink);
+  border-radius: 24px;
+  padding: 48px 44px;
+  color: var(--cream);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-copy {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-copy h2 {
+  margin: 0;
+  font-size: 32px;
+  color: var(--yellow);
+}
+
+.contact-copy p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.85;
+  text-wrap: pretty;
+}
+
+.contact-list {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 15px;
+}
+
+.contact-list > div {
+  display: flex;
+  gap: 14px;
+}
+
+.contact-list dt {
+  flex: 0 0 72px;
+  font-weight: 700;
+  color: var(--yellow);
+  margin: 0;
+}
+
+.contact-list dd {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-list a {
+  color: var(--cream);
+}
+
+.contact-list a:hover {
+  color: var(--yellow);
+}
+
+/* ---------- Policy pages ---------- */
+.policy {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 64px 24px 88px;
+}
+
+.policy h1 {
+  margin: 0 0 8px;
+  font-size: 40px;
+}
+
+.policy-date {
+  margin: 0 0 40px;
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.policy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.policy-section h2 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.policy-section p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-line;
+  text-wrap: pretty;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--ink);
+  color: #cfc8b8;
+}
+
+.footer-inner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-top img {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.footer-top span {
+  font-family: var(--font-jua), "Jua", sans-serif;
+  font-size: 18px;
+  color: var(--yellow);
+}
+
+.footer-links {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #cfc8b8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+}
+
+.footer-legal {
+  font-size: 12.5px;
+  line-height: 1.9;
+  opacity: 0.8;
+}
+
+.footer-copy {
+  font-size: 12px;
+  opacity: 0.55;
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .header-nav {
+    gap: 14px;
+  }
+
+  .game-head,
+  .features,
+  .shots,
+  .stores,
+  .company-table,
+  .upcoming {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .company-row {
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 0;
+  }
+
+  .company-row dt {
+    flex: none;
+  }
+}
