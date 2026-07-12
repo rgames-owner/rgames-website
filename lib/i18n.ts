@@ -212,7 +212,7 @@ export const DICT: Record<Lang, Dict> = {
     heroBadge: 'A game studio hatched from a tiny egg',
     heroTitle: 'Freshly hatched games, from R Games',
     heroDesc:
-      'R Games is an indie game studio based in Songdo, Incheon, Korea. We make mobile games where progress feels great — even in short sessions.',
+      'R Games is a small-team mobile game studio. We make mobile games where the fun of growth comes through — even in short sessions.',
     heroCta: 'See our games',
     gamesTitle: 'Our Games',
     htGenre: 'Idle · Simulation RPG',
@@ -234,7 +234,7 @@ export const DICT: Record<Lang, Dict> = {
     address: '317, 158 Harmony-ro, Yeonsu-gu, Incheon, 21998, Republic of Korea',
     footPrivacy: 'Privacy Policy',
     footTerms: 'Terms of Service',
-    footLegal1: 'R Games | CEO: Myeongseok | Business Registration No. 680-20-02554',
+    footLegal1: 'R Games | CEO: Myung Seok | Business Registration No. 680-20-02554',
     footLegal2: 'Address: 317, 158 Harmony-ro, Yeonsu-gu, Incheon, 21998, Republic of Korea',
     footLegal3: 'Email: owner@rgames.co.kr | Tel: +82-10-9539-9513',
     privacyTitle: 'Privacy Policy',
@@ -247,7 +247,7 @@ export const DICT: Record<Lang, Dict> = {
     ],
     companyRows: [
       { k: 'Legal name', v: 'R Games (알 게임즈)' },
-      { k: 'CEO', v: 'Myeongseok' },
+      { k: 'CEO', v: 'Myung Seok' },
       { k: 'Business Reg. No.', v: '680-20-02554' },
       { k: 'Address', v: '317, 158 Harmony-ro, Yeonsu-gu, Incheon, 21998, Republic of Korea' },
       { k: 'Email', v: 'owner@rgames.co.kr' },
@@ -289,7 +289,7 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '9. Privacy Officer',
-        b: 'Privacy Officer: Myeongseok (CEO)\nEmail: owner@rgames.co.kr\nTel: +82-10-9539-9513\nAddress: 317, 158 Harmony-ro, Yeonsu-gu, Incheon, Republic of Korea',
+        b: 'Privacy Officer: Myung Seok (CEO)\nEmail: owner@rgames.co.kr\nTel: +82-10-9539-9513\nAddress: 317, 158 Harmony-ro, Yeonsu-gu, Incheon, Republic of Korea',
       },
       {
         h: '10. Changes to This Policy',

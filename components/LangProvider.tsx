@@ -10,22 +10,26 @@ interface LangContextValue {
 }
 
 const LangContext = createContext<LangContextValue>({
-  lang: 'ko',
-  t: DICT.ko,
+  lang: 'en',
+  t: DICT.en,
   toggle: () => {},
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('ko');
+  const [lang, setLang] = useState<Lang>('en');
 
   useEffect(() => {
     const saved = window.localStorage.getItem('rg-lang');
     if (saved === 'en' || saved === 'ko') setLang(saved);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   const toggle = () => {
     setLang((prev) => {
-      const next = prev === 'ko' ? 'en' : 'ko';
+      const next = prev === 'en' ? 'ko' : 'en';
       window.localStorage.setItem('rg-lang', next);
       return next;
     });

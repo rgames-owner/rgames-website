@@ -13,20 +13,20 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: 'R GAMES | 알 게임즈',
+  title: 'R GAMES',
   description:
-    '알 게임즈(R Games)는 소규모 팀의 모바일 게임 스튜디오입니다. Hunter Tower: Offline IDLE RPG 개발사.',
+    'R Games is a small mobile game studio. Developers of Hunter Tower: Offline IDLE RPG.',
   icons: { icon: '/logo.png' },
   openGraph: {
-    title: 'R GAMES | 알 게임즈',
-    description: 'Hunter Tower를 만든 모바일 게임 스튜디오, 알 게임즈(R Games).',
+    title: 'R GAMES',
+    description: 'R Games — the mobile game studio behind Hunter Tower.',
     images: ['/logo.png'],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className={`${jua.variable} ${notoSansKr.variable}`}>
+    <html lang="en" className={`${jua.variable} ${notoSansKr.variable}`}>
       <body>
         <LangProvider>
           <div className="page">
