@@ -154,7 +154,7 @@ h3,
   margin: 0;
   font-size: 56px;
   line-height: 1.15;
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 .hero-desc {
@@ -222,7 +222,7 @@ h3,
   line-height: 1.7;
   max-width: 100%;
   color: var(--muted);
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 /* ---------- Game card ---------- */
@@ -275,7 +275,7 @@ h3,
   margin: 0;
   font-size: 16px;
   line-height: 1.7;
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 .features {
@@ -416,7 +416,7 @@ h3,
   line-height: 1.7;
   color: var(--muted);
   max-width: 560px;
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 /* ---------- Company ---------- */
@@ -483,7 +483,7 @@ h3,
   font-size: 15px;
   line-height: 1.7;
   opacity: 0.85;
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 .contact-list {
@@ -554,7 +554,7 @@ h3,
   font-size: 15px;
   line-height: 1.8;
   white-space: pre-line;
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 .policy-game-label {
@@ -582,7 +582,7 @@ h3,
   margin: 0 0 12px;
   font-size: 15px;
   line-height: 1.8;
-  text-wrap: pretty;
+  text-wrap: auto;
 }
 
 .policy-note {
