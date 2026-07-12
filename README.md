@@ -16,15 +16,15 @@ npm run dev
 
 http://localhost:3000 에서 확인.
 
-## 배포 (예: Vercel)
+## 배포 (Cloudflare Pages)
 
-```bash
-npm i -g vercel
-vercel
-```
+GitHub 저장소를 Cloudflare Pages에 연결한 뒤 다음 빌드 설정을 사용합니다.
 
-또는 GitHub에 push 후 vercel.com에서 import — 도메인 연결까지 하면
-앱스토어 심사에 제출할 URL이 완성됩니다.
+- Build command: `npm run build`
+- Build output directory: `out`
+- Custom domain: `rgames.co.kr`
+
+`main` 브랜치에 push하면 자동으로 다시 배포됩니다.
 
 ## 구조
 
@@ -37,7 +37,6 @@ vercel
 
 ## 수정 포인트
 
-- 회사 이메일이 생기면 `lib/i18n.ts`의 `CONTACT.email` 및 footLegal3, 정책 문서 내 이메일 교체
 - App Store 심사 통과 후: `components/Home.tsx`의 `store-btn disabled` div를
   Google Play 버튼과 같은 `<a>` 링크로 교체
 - 시행일 변경: `lib/i18n.ts`의 `effectiveDate` 및 정책 마지막 조항
