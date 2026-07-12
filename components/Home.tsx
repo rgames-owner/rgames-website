@@ -1,11 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLang } from './LangProvider';
 import { CONTACT, HT_ICON, SCREENSHOTS } from '@/lib/i18n';
+import { getGame } from '@/lib/games';
 
 export default function Home() {
   const { t } = useLang();
+  const ht = getGame('hunter-tower')!;
 
   return (
     <>
@@ -38,6 +41,10 @@ export default function Home() {
               <span className="game-genre">{t.htGenre}</span>
               <h3 className="game-title">Hunter Tower</h3>
               <p className="game-desc">{t.htDesc}</p>
+              <div className="game-policy-links">
+                <Link href={`/games/${ht.slug}/privacy`}>{t.footPrivacy}</Link>
+                <Link href={`/games/${ht.slug}/terms`}>{t.footTerms}</Link>
+              </div>
             </div>
           </div>
 

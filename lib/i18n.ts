@@ -78,7 +78,7 @@ export const DICT: Record<Lang, Dict> = {
     heroBadge: '작은 알에서 시작된 게임 스튜디오',
     heroTitle: '알을 깨고 나온 게임, 알 게임즈',
     heroDesc:
-      '알 게임즈(R Games)는 소규모 팀의 모바일 게임 스튜디오입니다. 짧은 시간에도 성장의 재미가 느껴지는 모바일 게임을 만듭니다.',
+      '영어 R과 한국어 ‘알’은 소리가 같습니다. 그 소리에서 시작해, 알을 깨고 나오는 마음으로 알 게임즈(R Games)라는 이름을 지었습니다. 짧은 시간에도 성장의 재미가 느껴지는 모바일 게임을 만듭니다.',
     heroCta: '게임 보러 가기',
     gamesTitle: '우리가 만든 게임',
     htGenre: '방치형 · 시뮬레이션 RPG',
@@ -212,7 +212,7 @@ export const DICT: Record<Lang, Dict> = {
     heroBadge: 'A game studio hatched from a tiny egg',
     heroTitle: 'Freshly hatched games, from R Games',
     heroDesc:
-      'R Games is a small-team mobile game studio. We make mobile games where the fun of growth comes through — even in short sessions.',
+      'In Korean, “R” sounds like al (알) — egg. From that shared sound, and the idea of cracking open an egg, we named ourselves R Games (알 게임즈). We make mobile games where growth feels rewarding, even in short sessions.',
     heroCta: 'See our games',
     gamesTitle: 'Our Games',
     htGenre: 'Idle · Simulation RPG',
