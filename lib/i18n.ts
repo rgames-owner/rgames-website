@@ -217,7 +217,7 @@ export const DICT: Record<Lang, Dict> = {
     gamesTitle: 'Our Games',
     htGenre: 'Idle · Simulation RPG',
     htDesc:
-      'A 2D idle tower-climbing RPG where hunters automatically climb floors and defeat monsters. Promote hunters, collect relics, and Prestige to make every run faster and stronger. Offline rewards keep you growing while you are away.',
+      'A 2D idle tower-climbing RPG where hunters automatically climb floors and defeat monsters. Promote hunters, collect relics, and Succession to make every run faster and stronger. Offline rewards keep you growing while you are away.',
     getItOn: 'GET IT ON',
     comingSoon: 'In review',
     upBadge: 'COMING SOON',
@@ -243,7 +243,7 @@ export const DICT: Record<Lang, Dict> = {
     features: [
       { t: 'Auto climb', d: 'Hunters defeat monsters on each floor and climb upward on their own.' },
       { t: '9-rank promotion', d: 'Promote hunters from F all the way to O rank with Elixir.' },
-      { t: 'Prestige & Relics', d: 'Prestige for Elixir and Soul Stones; relics make every next run faster.' },
+      { t: 'Succession & Relics', d: 'Succession for Elixir and Soul Stones; relics make every next run faster.' },
     ],
     companyRows: [
       { k: 'Legal name', v: 'R Games (알 게임즈)' },
