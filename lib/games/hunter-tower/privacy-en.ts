@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerPrivacyEn: GamePolicy = {
   title: 'Hunter Tower Privacy Policy',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-09',
+  lastUpdated: '2026-07-15',
   introNote: [{ type: 'text', text: 'This Privacy Policy applies to all distribution channels including Google Play, the Apple App Store, and ONE store.' }],
   blocks: fromMarkdown(`### 1. Introduction
 \`R Games\` ("**we**", "**us**", or "**operator**") operates the mobile game **Hunter Tower** (the "**App**"). We explain how information is handled in connection with the App in line with applicable privacy laws (including, where relevant, the laws of the Republic of Korea).
@@ -25,6 +25,7 @@ However, the following categories may be **generated automatically** or **proces
 - **Ad-related events** such as impressions, clicks, and rewarded ad completion, as defined by ad network policies
 - **App usage analytics** (app instance identifier, in-app event logs, coarse IP-based location, etc.), processed via **Firebase Analytics** for usage statistics and service improvement
 - **Crash diagnostics** (error logs, device state, OS and app version, etc.), processed via **Firebase Crashlytics** for stability and error diagnosis
+- **Default Firebase collection:** Firebase Analytics and Firebase Crashlytics are enabled by default when the App starts. The SDKs may automatically process app-usage events and may collect or send crash diagnostics when a crash occurs or the App is next launched.
 
 ### 2.2 Game progress (local and cloud storage)
 - By default, the App stores game progress (e.g., stages, currency, settings) in **local storage on your device**.
@@ -54,6 +55,7 @@ However, the following categories may be **generated automatically** or **proces
 
 ### 3. Purposes of processing
 - **Providing and maintaining** the App (saving progress, troubleshooting, etc.)
+- **App usage analytics and crash diagnostics** for service improvement, error diagnosis, and stability
 - **Cloud save and account sign-in** for progress restore, **ranking/competitive content** and reward delivery, and prevention of rank manipulation
 - **Personalized or non-personalized ads**, ad measurement, and **abuse prevention**
 - **In-app purchases** and delivery of paid content or features
@@ -106,8 +108,10 @@ Contact: \`rgames.cs.team@gmail.com\`
 
 ### 8. Ads, similar technologies, and consent
 - **Ad SDKs** may process advertising identifiers and related data.
-- In some regions (e.g., **EEA, UK, Switzerland**), a **consent or choice UI** (e.g., **Google UMP**) will appear.
-- On **iOS**, because the App uses the advertising identifier (IDFA), an **App Tracking Transparency** prompt is shown on first launch requesting your **permission to track**. You may decline; the App remains fully usable and only personalized ads are limited.
+- In some regions, including the **EEA, UK, and Switzerland**, an advertising-related consent or choice UI, such as **Google UMP**, may be shown.
+- On iOS, if the App requests permission through **App Tracking Transparency (ATT)**, the system prompt asks whether the App may access IDFA and track activity across other companies' apps and websites. You may decline and continue using the App; cross-app tracking, ad personalization, and ad measurement may then be limited.
+- Google UMP and iOS ATT apply to advertising and tracking choices. They are not separate consent or opt-out controls for Firebase Analytics or Firebase Crashlytics, and changing a UMP or ATT choice does not disable Firebase collection.
+- The App currently does not provide a separate in-app setting that lets users directly enable or disable Firebase Analytics or Firebase Crashlytics collection.
 
 ### 9. Children
 The App is **not primarily directed** at children **under 14**. If child-directed, we additionally comply with **applicable child-protection laws** and **Google, Apple, and ad network policies** for child-directed services.

@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerPrivacyKo: GamePolicy = {
   title: 'Hunter Tower 개인정보처리방침',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-09',
+  lastUpdated: '2026-07-15',
   introNote: [{ type: 'text', text: '본 개인정보처리방침은 Google Play, Apple App Store, ONE store 등 모든 배포 채널에 공통 적용됩니다.' }],
   blocks: fromMarkdown(`### 1. 총칙
 \`알 게임즈\`(이하 "운영자")는 모바일 게임 **Hunter Tower**(이하 "본 앱") 서비스 제공과 관련하여 「개인정보 보호법」 등 관련 법령을 준수하며, 이용자의 개인정보가 어떤 목적으로 어떻게 처리되는지 알기 쉽게 안내합니다.
@@ -25,6 +25,7 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 - 광고 노출·클릭·보상형 광고 완료 여부 등 **광고 관련 이벤트**(광고 네트워크 정책에 따름)
 - **앱 이용 분석 정보**(앱 인스턴스 식별자, 게임 내 이벤트 이용 기록, IP 기반의 대략적 위치 등) — **이용 통계 분석·서비스 개선**을 위해 **Firebase Analytics**를 통해 처리될 수 있음
 - **비정상 종료(크래시) 진단 정보**(오류 로그, 기기 상태, OS·앱 버전 등) — **오류 진단·안정성 개선**을 위해 **Firebase Crashlytics**를 통해 처리될 수 있음
+- **Firebase 기본 수집:** Firebase Analytics와 Firebase Crashlytics는 앱 실행 시 기본적으로 활성화됩니다. SDK는 앱 이용 이벤트를 자동으로 처리할 수 있으며, 비정상 종료가 발생하거나 앱을 다시 실행할 때 크래시 진단 정보를 자동으로 수집·전송할 수 있습니다.
 
 ### 2.2 게임 진행 정보(로컬 저장 및 클라우드 저장)
 - 본 앱은 **기본적으로 기기 내부 저장소**에 게임 진행 데이터(예: 스테이지, 재화, 설정 등)를 저장합니다.
@@ -54,6 +55,7 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 
 ### 3. 수집·이용 목적
 - 본 앱 **서비스 제공·기능 유지**(게임 진행 저장, 버그 대응 등)
+- **서비스 개선·오류 진단·안정성 확보**를 위한 앱 이용 통계 분석 및 크래시 진단
 - **클라우드 저장·계정 로그인** 을 통한 진행 복원, **랭킹·경쟁 콘텐츠** 제공 및 보상 지급, 부정 순위 방지
 - **맞춤형·비개인화 광고** 표시, 광고 성과 측정, **부정 이용 방지**
 - **인앱 결제** 처리 및 유료 콘텐츠/기능 제공
@@ -108,8 +110,10 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 
 ### 8. 광고·유사 기술·동의
 - 본 앱은 **광고 SDK**를 통해 **광고 식별자** 및 관련 정보가 처리될 수 있습니다.
-- **유럽 경제 지역(EEA)·영국·스위스** 등 일부 지역에서는 **Google UMP(사용자 메시징 플랫폼)** 를 통한 **동의 또는 선택** UI가 표시됩니다.
-- **iOS**에서는 앱이 광고 식별자(IDFA)를 사용하므로, **앱 추적 투명성(App Tracking Transparency)** 에 따라 최초 실행 시 **사용자 추적 동의** 요청이 표시됩니다. 동의를 거부해도 앱은 정상 이용 가능하며, 맞춤 광고만 제한됩니다.
+- **유럽 경제 지역(EEA)·영국·스위스** 등 일부 지역에서는 **Google UMP(사용자 메시징 플랫폼)** 를 통한 광고 관련 동의 또는 선택 UI가 표시될 수 있습니다.
+- iOS에서 본 앱이 **앱 추적 투명성(App Tracking Transparency, ATT)** 권한을 요청하는 경우, 해당 시스템 창은 IDFA 접근 및 다른 회사의 앱·웹사이트를 아우르는 추적 허용 여부를 묻습니다. 거부해도 앱은 이용할 수 있으나, 앱 간 추적·광고 개인화·광고 측정이 제한될 수 있습니다.
+- Google UMP와 iOS ATT는 광고 및 추적 선택에 적용됩니다. 이는 Firebase Analytics 또는 Firebase Crashlytics 수집에 대한 별도 동의·거부 수단이 아니며, UMP 또는 ATT 선택을 변경해도 Firebase 수집은 비활성화되지 않습니다.
+- 현재 본 앱에는 Firebase Analytics 또는 Firebase Crashlytics 수집을 이용자가 직접 켜거나 끄는 별도 앱 내 설정이 없습니다.
 
 ### 9. 아동의 개인정보
 본 앱은 **만 14세 미만 아동**을 주된 이용 대상으로 하지 않습니다.
