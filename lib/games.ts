@@ -14,4 +14,10 @@ export function getGame(slug: string): Game | undefined {
   return undefined;
 }
 
-export type { Game, GameSlug, GamePolicy, PolicyBlock } from '@/lib/games/types';
+export type {
+  Game,
+  GameSlug,
+  GamePolicy,
+  GamePatchNotes,
+  PolicyBlock,
+} from '@/lib/games/types';

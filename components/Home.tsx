@@ -44,6 +44,7 @@ export default function Home() {
               <div className="game-policy-links">
                 <Link href={`/games/${ht.slug}/privacy`}>{t.footPrivacy}</Link>
                 <Link href={`/games/${ht.slug}/terms`}>{t.footTerms}</Link>
+                <Link href={`/games/${ht.slug}/patch-notes`}>{t.footPatchNotes}</Link>
               </div>
             </div>
           </div>

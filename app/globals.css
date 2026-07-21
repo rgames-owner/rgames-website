@@ -644,6 +644,18 @@ h3,
   color: var(--ink);
 }
 
+.patch-notes-body {
+  gap: 28px;
+}
+
+.patch-note-entry .policy-h2 {
+  margin-top: 0;
+}
+
+.patch-note-body {
+  white-space: pre-line;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--ink);

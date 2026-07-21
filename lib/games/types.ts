@@ -25,11 +25,22 @@ export interface GamePolicy {
   blocks: PolicyBlock[];
 }
 
+export interface PatchNoteEntry {
+  version: string;
+  body: Record<Lang, string>;
+}
+
+export interface GamePatchNotes {
+  title: Record<Lang, string>;
+  entries: PatchNoteEntry[];
+}
+
 export interface Game {
   slug: GameSlug;
   title: string;
   privacy: Record<Lang, GamePolicy>;
   terms: Record<Lang, GamePolicy>;
+  patchNotes?: GamePatchNotes;
 }
 
 export function p(text: string): PolicyBlock {
