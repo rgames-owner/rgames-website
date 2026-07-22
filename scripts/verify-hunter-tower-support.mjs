@@ -12,6 +12,12 @@ const game = read('lib/games/hunter-tower/index.ts');
 const home = read('components/Home.tsx');
 const i18n = read('lib/i18n.ts');
 const css = read('app/globals.css');
+const policyFiles = [
+  'lib/games/hunter-tower/privacy-en.ts',
+  'lib/games/hunter-tower/privacy-ko.ts',
+  'lib/games/hunter-tower/terms-en.ts',
+  'lib/games/hunter-tower/terms-ko.ts',
+];
 
 assert.match(route, /GameSupportPage/);
 assert.match(route, /generateStaticParams/);
@@ -27,6 +33,11 @@ assert.match(home, /games\/\$\{ht\.slug\}\/support/);
 assert.match(home, /t\.footSupport/);
 assert.match(i18n, /footSupport: '고객지원'/);
 assert.match(i18n, /footSupport: 'Support'/);
+for (const path of policyFiles) {
+  const content = read(path);
+  assert.doesNotMatch(content, /rgames\.cs\.team@gmail\.com/, `${path} contains legacy support email`);
+  assert.match(content, /cs\.team@rgames\.co\.kr/, `${path} must contain current support email`);
+}
 
 const declaredCssTokens = new Set(
   [...css.matchAll(/--([a-zA-Z0-9-]+)\s*:/g)].map((match) => match[1]),

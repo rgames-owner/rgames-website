@@ -100,7 +100,7 @@ export const hunterTowerTermsKo: GamePolicy = {
 3. 해외 이용자의 경우 해당 국가의 강행 법규가 적용될 수 있습니다.
 
 ### 제17조 (문의)
-- **이메일:** \`rgames.cs.team@gmail.com\`
+- **이메일:** \`cs.team@rgames.co.kr\`
 
 ### 부록
 - 본 이용약관과 함께 **개인정보처리방침**도 반드시 확인해 주세요: [개인정보처리방침](/games/hunter-tower/privacy)

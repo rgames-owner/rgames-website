@@ -12,7 +12,7 @@ export const hunterTowerPrivacyEn: GamePolicy = {
 - This policy is current as of the **Last updated** date above. We may notify you of changes via the App or this page.
 
 **Contact**
-- Email: \`rgames.cs.team@gmail.com\`
+- Email: \`cs.team@rgames.co.kr\`
 
 ### 2. Information we collect or that is processed
 The App is offered **without requiring account registration**. We do **not** collect email, real name, or similar account details that you do not voluntarily provide.
@@ -104,7 +104,7 @@ Depending on your jurisdiction, you may have rights to **access, correct, delete
 - **Android:** Settings → Google → Ads or privacy settings — **reset ad ID**, **opt out of ads personalization**, etc.
 - **iOS:** Settings → Privacy & Security → **Tracking**, **Apple Advertising**, etc.
 
-Contact: \`rgames.cs.team@gmail.com\`
+Contact: \`cs.team@rgames.co.kr\`
 
 ### 8. Ads, similar technologies, and consent
 - **Ad SDKs** may process advertising identifiers and related data.
@@ -123,7 +123,7 @@ We endeavor to apply **reasonable measures** (minimizing data, signing local-sav
 We may update this policy when laws, the App, or SDKs change. We will post the **effective date** and, where appropriate, summarize **material changes** on this page.
 
 ### 12. Contact
-- **Email:** \`rgames.cs.team@gmail.com\`
+- **Email:** \`cs.team@rgames.co.kr\`
 
 ### Appendix A. Store privacy-disclosure mapping (reference)
 The table below shows this policy aligns with each store's privacy disclosure (Apple App Privacy / Google Play Data safety).

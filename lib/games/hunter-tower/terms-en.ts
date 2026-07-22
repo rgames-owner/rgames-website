@@ -100,7 +100,7 @@ If we cause damage to a User through **willful misconduct or gross negligence**,
 3. For Users outside Korea, mandatory local laws may apply to the extent required.
 
 ### Article 17. Contact
-- **Email:** \`rgames.cs.team@gmail.com\`
+- **Email:** \`cs.team@rgames.co.kr\`
 
 ### Appendix
 - Please also review our **Privacy Policy** alongside these Terms of Service: [Privacy Policy](/games/hunter-tower/privacy)

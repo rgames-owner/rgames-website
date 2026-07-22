@@ -12,7 +12,7 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 - 본 방침은 **최종 수정일** 기준이며, 변경 시 앱 내 또는 본 페이지를 통해 공지할 수 있습니다.
 
 **운영자 연락처**
-- 이메일: \`rgames.cs.team@gmail.com\`
+- 이메일: \`cs.team@rgames.co.kr\`
 
 ### 2. 수집·이용하는 정보
 본 앱은 **회원가입을 요구하지 않는 방식**으로 제공됩니다. 이메일·실명 등 이용자가 직접 입력하는 계정 정보는 운영자가 수집하지 않습니다.
@@ -106,7 +106,7 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 - **Android:** 설정 → Google → 광고 또는 개인정보 보호 설정에서 **광고 ID 재설정·맞춤 광고 옵트아웃** 등
 - **iOS:** 설정 → 개인 정보 보호 및 보안 → **추적(Tracking)**, **Apple 광고** 등에서 추적 허용 여부 변경
 
-문의: \`rgames.cs.team@gmail.com\`
+문의: \`cs.team@rgames.co.kr\`
 
 ### 8. 광고·유사 기술·동의
 - 본 앱은 **광고 SDK**를 통해 **광고 식별자** 및 관련 정보가 처리될 수 있습니다.
@@ -127,7 +127,7 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 법령·서비스·SDK 변경 시 본 방침을 수정할 수 있으며, **시행일·주요 변경 사유**를 본 페이지에 게시합니다.
 
 ### 12. 문의
-- **이메일:** \`rgames.cs.team@gmail.com\`
+- **이메일:** \`cs.team@rgames.co.kr\`
 
 ### 부록 A. 스토어 개인정보 신고 대응표(참고)
 아래 표는 본 방침이 각 스토어의 개인정보 신고(Apple App Privacy / Google Play 데이터 보안)와 일치함을 보여 주기 위한 참고 자료입니다.
