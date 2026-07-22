@@ -45,6 +45,7 @@ export default function Home() {
                 <Link href={`/games/${ht.slug}/privacy`}>{t.footPrivacy}</Link>
                 <Link href={`/games/${ht.slug}/terms`}>{t.footTerms}</Link>
                 <Link href={`/games/${ht.slug}/patch-notes`}>{t.footPatchNotes}</Link>
+                <Link href={`/games/${ht.slug}/support`}>{t.footSupport}</Link>
               </div>
             </div>
           </div>

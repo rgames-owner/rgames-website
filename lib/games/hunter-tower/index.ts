@@ -4,6 +4,7 @@ import { hunterTowerPrivacyKo } from './privacy-ko';
 import { hunterTowerTermsEn } from './terms-en';
 import { hunterTowerTermsKo } from './terms-ko';
 import { hunterTowerPatchNotes } from './patch-notes.generated';
+import { hunterTowerSupport } from './support';
 
 export const hunterTower: Game = {
   slug: 'hunter-tower',
@@ -11,4 +12,5 @@ export const hunterTower: Game = {
   privacy: { en: hunterTowerPrivacyEn, ko: hunterTowerPrivacyKo },
   terms: { en: hunterTowerTermsEn, ko: hunterTowerTermsKo },
   patchNotes: hunterTowerPatchNotes,
+  support: hunterTowerSupport,
 };

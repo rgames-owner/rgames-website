@@ -35,12 +35,34 @@ export interface GamePatchNotes {
   entries: PatchNoteEntry[];
 }
 
+export interface GameSupportCategory {
+  title: string;
+  description: string;
+}
+
+export interface GameSupport {
+  title: string;
+  intro: string;
+  categoriesTitle: string;
+  categories: GameSupportCategory[];
+  includeTitle: string;
+  includeItems: string[];
+  privacyWarning: string;
+  contactTitle: string;
+  contactDescription: string;
+  emailAction: string;
+  emailSubject: string;
+  privacyLink: string;
+  termsLink: string;
+}
+
 export interface Game {
   slug: GameSlug;
   title: string;
   privacy: Record<Lang, GamePolicy>;
   terms: Record<Lang, GamePolicy>;
   patchNotes?: GamePatchNotes;
+  support?: Record<Lang, GameSupport>;
 }
 
 export function p(text: string): PolicyBlock {

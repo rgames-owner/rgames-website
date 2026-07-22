@@ -656,6 +656,85 @@ h3,
   white-space: pre-line;
 }
 
+.support-page {
+  max-width: 960px;
+}
+
+.support-intro {
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.support-section {
+  margin-top: 34px;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.support-card {
+  padding: 20px;
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.support-card h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.support-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.support-warning {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-left: 3px solid var(--ink);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--yellow) 28%, transparent);
+  line-height: 1.6;
+}
+
+.support-contact {
+  margin-top: 34px;
+}
+
+.support-email-button {
+  display: inline-flex;
+  margin-top: 18px;
+}
+
+.support-policy-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.support-policy-links a {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.support-policy-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--ink);

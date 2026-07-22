@@ -40,6 +40,7 @@ export interface Dict {
   footPrivacy: string;
   footTerms: string;
   footPatchNotes: string;
+  footSupport: string;
   footLegal1: string;
   footLegal2: string;
   footLegal3: string;
@@ -102,6 +103,7 @@ export const DICT: Record<Lang, Dict> = {
     footPrivacy: '개인정보처리방침',
     footTerms: '이용약관',
     footPatchNotes: '패치노트',
+    footSupport: '고객지원',
     footLegal1: '알 게임즈 (R Games) | 대표: 명석 | 사업자등록번호: 680-20-02554',
     footLegal2: '주소: 인천광역시 연수구 하모니로 158, 317-C71 (우 21998)',
     footLegal3: '이메일: owner@rgames.co.kr | 전화: 010-9539-9513',
@@ -237,6 +239,7 @@ export const DICT: Record<Lang, Dict> = {
     footPrivacy: 'Privacy Policy',
     footTerms: 'Terms of Service',
     footPatchNotes: 'Patch Notes',
+    footSupport: 'Support',
     footLegal1: 'R Games | CEO: Myung Seok | Business Registration No. 680-20-02554',
     footLegal2: 'Address: 317, 158 Harmony-ro, Yeonsu-gu, Incheon, 21998, Republic of Korea',
     footLegal3: 'Email: owner@rgames.co.kr | Tel: +82-10-9539-9513',
