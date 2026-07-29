@@ -46,7 +46,9 @@ export interface Dict {
   footLegal3: string;
   privacyTitle: string;
   termsTitle: string;
-  effectiveDate: string;
+  // 개인정보처리방침과 이용약관은 개정 시점이 서로 달라 시행일을 분리해 관리한다.
+  privacyEffectiveDate: string;
+  termsEffectiveDate: string;
   features: Feature[];
   companyRows: CompanyRow[];
   privacySections: PolicySection[];
@@ -109,7 +111,8 @@ export const DICT: Record<Lang, Dict> = {
     footLegal3: '이메일: owner@rgames.co.kr | 전화: 010-9539-9513',
     privacyTitle: '개인정보처리방침',
     termsTitle: '이용약관',
-    effectiveDate: '시행일: 2026년 7월 11일',
+    privacyEffectiveDate: '시행일: 2026년 8월 3일',
+    termsEffectiveDate: '시행일: 2026년 7월 11일',
     features: [
       { t: '자동 등반', d: '헌터들이 층마다 몬스터를 처치하며 스스로 탑을 오릅니다.' },
       { t: '9단계 승급', d: 'F부터 O 등급까지, 엘릭서로 헌터를 승급시켜 강해지세요.' },
@@ -131,23 +134,23 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '2. 수집하는 개인정보 항목 및 수집 방법',
-        b: '회사의 게임은 별도의 회원가입 없이 이용할 수 있으며, 이름·이메일 등 개인 식별 정보를 직접 수집하지 않습니다.\n서비스 이용 과정에서 다음 정보가 자동으로 수집될 수 있습니다.\n• 기기 정보(기기 모델, OS 버전, 언어 설정)\n• 광고 식별자(ADID/IDFA)\n• 앱 이용 기록 및 오류 로그\n• 인앱 결제 시 스토어(Google Play, ONE store, App Store)가 처리하는 결제 정보(회사는 카드번호 등 결제 수단 정보를 직접 수집하지 않습니다)',
+        b: '회사의 게임은 별도의 회원가입 없이 이용할 수 있으며, 이름·이메일 등 개인 식별 정보를 직접 수집하지 않습니다.\n서비스 이용 과정에서 다음 정보가 자동으로 수집될 수 있습니다.\n• 기기 정보(기기 모델, OS 버전, 언어 설정)\n• 광고 식별자(ADID/IDFA)\n• 앱 이용 기록 및 오류 로그\n• 인앱 결제 시 스토어(Google Play, ONE store, App Store)가 처리하는 결제 정보(회사는 카드번호 등 결제 수단 정보를 직접 수집하지 않습니다)\n\n이용자가 클라우드 저장·랭킹 등 선택 기능을 이용하기 위해 플랫폼 계정(Android: Google Play Games, iOS: Apple Game Center)으로 로그인하는 경우 아래 정보가 추가로 처리됩니다.\n• 계정 식별자(Unity Authentication 플레이어 ID, 플랫폼 계정 식별자)\n• 이용자가 직접 입력한 랭킹 표시명(닉네임) — 랭킹 목록을 통해 다른 이용자에게 공개됩니다\n• 게임 진행 데이터에서 계산된 랭킹 점수\n• 클라우드에 동기화된 게임 진행 데이터\n로그인은 선택 사항이며, 로그인하지 않으면 게임 진행 데이터는 기기에만 저장됩니다.',
       },
       {
         h: '3. 개인정보의 수집 및 이용 목적',
-        b: '• 게임 서비스의 제공 및 운영\n• 보상형 광고 등 광고 서비스 제공\n• 서비스 오류 분석 및 품질 개선\n• 부정 이용 방지',
+        b: '• 게임 서비스의 제공 및 운영\n• 보상형 광고 등 광고 서비스 제공\n• 서비스 오류 분석 및 품질 개선\n• 클라우드 저장을 통한 게임 진행 복원\n• 랭킹 서비스 제공(표시명·순위·점수의 공개 표시 포함)\n• 부정 이용 방지',
       },
       {
         h: '4. 개인정보의 제3자 제공 및 처리 위탁',
-        b: '회사는 서비스 제공을 위해 다음 사업자가 제공하는 도구를 사용하며, 해당 과정에서 광고 식별자 등 일부 정보가 각 사업자에게 전송될 수 있습니다.\n• Google AdMob (광고 제공)\n• Google Firebase (오류 분석 및 통계)\n• Google Play, ONE store, Apple App Store (인앱 결제 처리)\n각 사업자의 개인정보 처리에 관한 사항은 해당 사업자의 개인정보처리방침을 따릅니다.',
+        b: '회사는 서비스 제공을 위해 다음 사업자가 제공하는 도구를 사용하며, 해당 과정에서 광고 식별자 등 일부 정보가 각 사업자에게 전송될 수 있습니다.\n• Google AdMob (광고 제공)\n• Google Firebase (오류 분석 및 통계)\n• Google Play, ONE store, Apple App Store (인앱 결제 처리)\n• Unity Gaming Services (계정 인증, 클라우드 저장, 랭킹 — 로그인 시)\n• Google Play Games (Android), Apple Game Center (iOS) (플랫폼 계정 인증 — 로그인 시)\n각 사업자의 개인정보 처리에 관한 사항은 해당 사업자의 개인정보처리방침을 따릅니다. 위 사업자 중 일부는 해외(미국 등)에 서버를 두고 정보를 처리할 수 있습니다.',
       },
       {
         h: '5. 개인정보의 보유 및 이용 기간',
-        b: '수집된 정보는 수집·이용 목적이 달성되면 지체 없이 파기합니다. 다만 관계 법령에 따라 보존할 필요가 있는 경우 해당 법령에서 정한 기간 동안 보관합니다.',
+        b: '수집된 정보는 수집·이용 목적이 달성되면 지체 없이 파기합니다. 다만 관계 법령에 따라 보존할 필요가 있는 경우 해당 법령에서 정한 기간 동안 보관합니다.\n계정·클라우드 저장·랭킹 데이터는 이용자가 계정 삭제를 요청하거나 앱 내 계정 삭제 기능을 이용할 때까지 보관되며, 삭제 시 함께 파기됩니다.',
       },
       {
         h: '6. 이용자의 권리',
-        b: '이용자는 기기 설정에서 광고 식별자를 재설정하거나 맞춤형 광고를 제한할 수 있습니다.\n• Android: 설정 > Google > 광고\n• iOS: 설정 > 개인정보 보호 > 추적\n또한 이용자는 아래 연락처를 통해 자신의 정보에 대한 열람·삭제를 요청할 수 있습니다.',
+        b: '이용자는 기기 설정에서 광고 식별자를 재설정하거나 맞춤형 광고를 제한할 수 있습니다.\n• Android: 설정 > Google > 광고\n• iOS: 설정 > 개인정보 보호 > 추적\n랭킹 표시명(닉네임)은 앱 내 설정 화면에서 언제든 변경할 수 있으며, 계정 및 클라우드 저장·랭킹 데이터는 앱 내 설정 화면의 계정 삭제 기능으로 삭제할 수 있습니다.\n또한 이용자는 아래 연락처를 통해 자신의 정보에 대한 열람·삭제를 요청할 수 있습니다.',
       },
       {
         h: '7. 아동의 개인정보',
@@ -163,7 +166,7 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '10. 고지의 의무',
-        b: '본 방침의 내용이 변경되는 경우, 변경 사항을 시행일 7일 전부터 본 페이지를 통해 공지합니다.\n본 방침은 2026년 7월 11일부터 시행됩니다.',
+        b: '본 방침의 내용이 변경되는 경우, 변경 사항을 시행일 7일 전부터 본 페이지를 통해 공지합니다.\n본 방침은 2026년 8월 3일부터 시행됩니다. (직전 방침 시행일: 2026년 7월 11일 / 주요 변경: 계정 로그인·클라우드 저장·랭킹 관련 처리 항목 추가)',
       },
     ],
     termsSections: [
@@ -245,7 +248,8 @@ export const DICT: Record<Lang, Dict> = {
     footLegal3: 'Email: owner@rgames.co.kr | Tel: +82-10-9539-9513',
     privacyTitle: 'Privacy Policy',
     termsTitle: 'Terms of Service',
-    effectiveDate: 'Effective date: July 11, 2026',
+    privacyEffectiveDate: 'Effective date: August 3, 2026',
+    termsEffectiveDate: 'Effective date: July 11, 2026',
     features: [
       { t: 'Auto climb', d: 'Hunters defeat monsters on each floor and climb upward on their own.' },
       { t: '9-rank promotion', d: 'Promote hunters from F all the way to O rank with Elixir.' },
@@ -267,23 +271,23 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '2. Information We Collect',
-        b: 'Our games can be played without creating an account, and we do not directly collect personally identifiable information such as your name or email address.\nThe following information may be collected automatically while you use the Service:\n• Device information (device model, OS version, language settings)\n• Advertising identifiers (ADID/IDFA)\n• App usage records and error logs\n• Payment information processed by the app stores (Google Play, ONE store, App Store) for in-app purchases — the Company does not directly collect payment credentials such as card numbers.',
+        b: 'Our games can be played without creating an account, and we do not directly collect personally identifiable information such as your name or email address.\nThe following information may be collected automatically while you use the Service:\n• Device information (device model, OS version, language settings)\n• Advertising identifiers (ADID/IDFA)\n• App usage records and error logs\n• Payment information processed by the app stores (Google Play, ONE store, App Store) for in-app purchases — the Company does not directly collect payment credentials such as card numbers.\n\nIf you sign in with a platform account (Android: Google Play Games, iOS: Apple Game Center) to use optional features such as cloud save and rankings, the following is additionally processed:\n• Account identifiers (Unity Authentication player ID and platform account identifier)\n• The ranking display name (nickname) you enter yourself — shown to other players in the ranking list\n• Ranking scores derived from your game progress data\n• Game progress synced to the cloud\nSigning in is optional; if you do not sign in, your game progress is stored only on your device.',
       },
       {
         h: '3. Purpose of Collection and Use',
-        b: '• Providing and operating the game service\n• Serving ads, including rewarded ads\n• Analyzing errors and improving quality\n• Preventing fraudulent use',
+        b: '• Providing and operating the game service\n• Serving ads, including rewarded ads\n• Analyzing errors and improving quality\n• Restoring game progress through cloud save\n• Providing ranking services (including public display of your display name, rank, and score)\n• Preventing fraudulent use',
       },
       {
         h: '4. Third-Party Services',
-        b: 'The Company uses tools provided by the following companies, and certain information such as advertising identifiers may be transmitted to them:\n• Google AdMob (advertising)\n• Google Firebase (crash analytics and statistics)\n• Google Play, ONE store, Apple App Store (in-app purchase processing)\nThe handling of personal information by each provider is governed by that provider\'s own privacy policy.',
+        b: 'The Company uses tools provided by the following companies, and certain information such as advertising identifiers may be transmitted to them:\n• Google AdMob (advertising)\n• Google Firebase (crash analytics and statistics)\n• Google Play, ONE store, Apple App Store (in-app purchase processing)\n• Unity Gaming Services (account authentication, cloud save, rankings — when signed in)\n• Google Play Games (Android), Apple Game Center (iOS) (platform account authentication — when signed in)\nThe handling of personal information by each provider is governed by that provider\'s own privacy policy. Some of these providers may process information on servers located outside your country (for example, in the United States).',
       },
       {
         h: '5. Retention Period',
-        b: 'Collected information is destroyed without delay once the purpose of collection has been fulfilled, except where retention is required by applicable law, in which case it is kept for the legally required period.',
+        b: 'Collected information is destroyed without delay once the purpose of collection has been fulfilled, except where retention is required by applicable law, in which case it is kept for the legally required period.\nAccount, cloud-save, and ranking data are retained until you request account deletion or use the in-app account deletion feature, at which point they are deleted together.',
       },
       {
         h: '6. Your Rights',
-        b: 'You may reset your advertising identifier or limit personalized ads in your device settings:\n• Android: Settings > Google > Ads\n• iOS: Settings > Privacy > Tracking\nYou may also request access to or deletion of your information using the contact details below.',
+        b: 'You may reset your advertising identifier or limit personalized ads in your device settings:\n• Android: Settings > Google > Ads\n• iOS: Settings > Privacy > Tracking\nYou can change your ranking display name (nickname) at any time in the app\'s settings screen, and you can delete your account together with cloud-save and ranking data using the account deletion feature in the app\'s settings.\nYou may also request access to or deletion of your information using the contact details below.',
       },
       {
         h: "7. Children's Privacy",
@@ -299,7 +303,7 @@ export const DICT: Record<Lang, Dict> = {
       },
       {
         h: '10. Changes to This Policy',
-        b: 'If this policy changes, the changes will be announced on this page at least 7 days before they take effect.\nThis policy is effective as of July 11, 2026.',
+        b: 'If this policy changes, the changes will be announced on this page at least 7 days before they take effect.\nThis policy is effective as of August 3, 2026. (Previous version effective July 11, 2026 — main change: added processing details for account sign-in, cloud save, and rankings.)',
       },
     ],
     termsSections: [

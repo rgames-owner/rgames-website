@@ -6,11 +6,12 @@ export default function PolicyPage({ kind }: { kind: 'privacy' | 'terms' }) {
   const { t } = useLang();
   const sections = kind === 'privacy' ? t.privacySections : t.termsSections;
   const title = kind === 'privacy' ? t.privacyTitle : t.termsTitle;
+  const effectiveDate = kind === 'privacy' ? t.privacyEffectiveDate : t.termsEffectiveDate;
 
   return (
     <div className="policy">
       <h1>{title}</h1>
-      <p className="policy-date">{t.effectiveDate}</p>
+      <p className="policy-date">{effectiveDate}</p>
       <div className="policy-body">
         {sections.map((sec) => (
           <section className="policy-section" key={sec.h}>

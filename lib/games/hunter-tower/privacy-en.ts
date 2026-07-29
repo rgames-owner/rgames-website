@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerPrivacyEn: GamePolicy = {
   title: 'Hunter Tower Privacy Policy',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-15',
+  lastUpdated: '2026-07-26',
   introNote: [{ type: 'text', text: 'This Privacy Policy applies to all distribution channels including Google Play, the Apple App Store, and ONE store.' }],
   blocks: fromMarkdown(`### 1. Introduction
 \`R Games\` ("**we**", "**us**", or "**operator**") operates the mobile game **Hunter Tower** (the "**App**"). We explain how information is handled in connection with the App in line with applicable privacy laws (including, where relevant, the laws of the Republic of Korea).
@@ -15,7 +15,7 @@ export const hunterTowerPrivacyEn: GamePolicy = {
 - Email: \`cs.team@rgames.co.kr\`
 
 ### 2. Information we collect or that is processed
-The App is offered **without requiring account registration**. We do **not** collect email, real name, or similar account details that you do not voluntarily provide.
+The App is offered **without requiring account registration**. We do **not** collect email, real name, or similar account details that you do not voluntarily provide. The one exception is the **display name (nickname) you enter yourself**, which is processed only if you take part in the rankings and is **shown to other players** in the ranking list (see 2.6).
 
 However, the following categories may be **generated automatically** or **processed by third parties** (ads, app stores, payments) for service delivery, advertising, payments, and device compatibility:
 
@@ -44,19 +44,26 @@ However, the following categories may be **generated automatically** or **proces
 - Content you voluntarily provide when contacting support (e.g., message text, reply email address)
 
 ### 2.6 Account sign-in and cloud storage (optional)
-- The App requests **platform account sign-in** for certain **competitive/ranking content such as World Boss**. The **core game (progression, combat, shop, etc.) is fully usable without signing in**; sign-in is optional.
+- The App requests **platform account sign-in** for **ranking and competitive content**. The **core game (progression, combat, shop, etc.) is fully usable without signing in**; sign-in is optional.
 - Sign-in and cloud storage are provided via **Unity Gaming Services (Unity Authentication, Cloud Save, Leaderboards, etc.)**. The following may be processed:
 - **Unity Authentication player ID** (the authoritative account identifier)
-- **Platform account identifier** — iOS: **Sign in with Apple**; Android: **Google Play Games**
-- **Ranking display name** and **competitive score / season records**
+- **Platform account identifier** — iOS: **Apple Game Center**; Android: **Google Play Games**
+- **Ranking display name (nickname)** and **ranking scores**
 - **Cloud-synced game progress** (see 2.2)
 - Accounts and rankings are managed **per platform account**. **Transfer or merging of accounts across different platforms (e.g., Android ↔ iOS) is not supported.** Signing in again with the same platform account restores the same account.
 - Except for development/QA convenience, we do **not** use purely anonymous accounts in production.
 
+### 2.7 Ranking (leaderboard) information
+- The App provides rankings for **highest floor, power, prestige count, codex level, and relic score**. Each score is **derived from your own game progress data** and contains no separate identifying information.
+- Ranking scores are stored in **Unity Gaming Services Leaderboards**, and your **display name (nickname), rank, and score are visible to other players**.
+- **No score is sent unless you open the ranking screen.** Submission happens the first time you open it in a session, and afterwards only for categories whose value has changed.
+- The **display name (nickname)** is entered by you and stored on Unity Gaming Services servers. We recommend not using your real name, email address, or other identifying information as a nickname. You can change it at any time in the App's **settings screen**.
+- Rankings are currently **for display only (honor rankings)** — no currency or item rewards are granted based on rank. We will update this policy if reward-based rankings (World Boss, guild, arena, etc.) are introduced.
+
 ### 3. Purposes of processing
 - **Providing and maintaining** the App (saving progress, troubleshooting, etc.)
 - **App usage analytics and crash diagnostics** for service improvement, error diagnosis, and stability
-- **Cloud save and account sign-in** for progress restore, **ranking/competitive content** and reward delivery, and prevention of rank manipulation
+- **Cloud save and account sign-in** for progress restore, **ranking/competitive content** (including public display of your ranking name, rank, and score), and prevention of rank manipulation
 - **Personalized or non-personalized ads**, ad measurement, and **abuse prevention**
 - **In-app purchases** and delivery of paid content or features
 - **Legal compliance**, dispute handling, and aggregated statistics where identification is limited
@@ -77,15 +84,15 @@ The App uses the **third-party services (SDKs)** below. Each provider processes 
 | Ads | Google AdMob (Google LLC) | Banner, interstitial, and rewarded ads and measurement. Mediation may show ads from the networks below. |
 | Ads (mediation) | AppLovin, Meta Audience Network, Vungle (Liftoff Monetize), Mintegral, Unity Ads | Ad serving and measurement via AdMob mediation. Each network processes advertising identifiers under its own policy. |
 | In-app purchases | Unity IAP + Google Play / App Store / ONE store | Purchases and receipt validation processed through the stores. |
-| Account & cloud | Unity Gaming Services (Unity Authentication, Cloud Save, Cloud Code, Leaderboards — Unity Technologies) | Platform sign-in, cloud sync of game progress, and ranking/competitive processing (when signed in). |
-| Platform accounts | Sign in with Apple (iOS), Google Play Games (Android) | Platform account authentication when you sign in, per each platform's policy. |
+| Account, cloud & ranking | Unity Gaming Services (Unity Authentication, Cloud Save, Leaderboards — Unity Technologies) | Platform sign-in, cloud sync of game progress, and storage/retrieval of ranking name, rank, and score (when signed in). Cloud Code may additionally be used if reward-based rankings are introduced. |
+| Platform accounts | Apple Game Center (iOS), Google Play Games (Android) | Platform account authentication when you sign in, per each platform's policy. |
 | Engine | Unity (Unity Technologies) | Technical processing related to the build and runtime, per Unity's policies. |
 | Analytics & crash | Firebase (Google Analytics for Firebase, Crashlytics — Google LLC) | App usage analytics and crash diagnostics. Data is processed by Google under its own policy. |
 
 Provider privacy policies (subject to change):
 - Google (AdMob, Firebase, Google Play Games): [Google Privacy Policy](https://policies.google.com/privacy)
 - Unity (incl. Unity Ads and Unity Gaming Services): [Unity Privacy Policy](https://unity.com/legal/privacy-policy) · [Unity game player privacy](https://unity.com/legal/game-player-and-app-user-privacy-policy)
-- Apple (Sign in with Apple): [Apple Privacy Policy](https://www.apple.com/legal/privacy/)
+- Apple (Game Center): [Apple Privacy Policy](https://www.apple.com/legal/privacy/)
 - AppLovin: [AppLovin Privacy](https://www.applovin.com/privacy/)
 - Meta Audience Network: [Meta Privacy](https://www.facebook.com/about/privacy)
 - Vungle / Liftoff Monetize: [Vungle Privacy](https://vungle.com/privacy/)
@@ -100,6 +107,7 @@ Some providers (e.g., Google — including AdMob, Firebase, and Google Play Game
 Depending on your jurisdiction, you may have rights to **access, correct, delete, or restrict** processing of personal data.
 - **If you have not signed in:** your progress is stored only on your device and can be removed by **uninstalling the App**.
 - **If you have signed in (account & cloud save):** you can request **deletion of your account and cloud-saved data** via the **account deletion feature in the App's settings** or by emailing us below. Upon request, cloud-save and ranking data linked to your Unity Authentication account are deleted. (Uninstalling or signing out alone does **not** delete server-side account data.)
+- **Correcting your ranking display name:** change it at any time via **Settings → Change Nickname** in the App.
 - **Ads / tracking:**
 - **Android:** Settings → Google → Ads or privacy settings — **reset ad ID**, **opt out of ads personalization**, etc.
 - **iOS:** Settings → Privacy & Security → **Tracking**, **Apple Advertising**, etc.
@@ -133,6 +141,7 @@ The table below shows this policy aligns with each store's privacy disclosure (A
 | Identifiers > Device/Ad ID | Yes | Yes | Advertising, Analytics | AdMob & mediation |
 | Identifiers > User ID | Yes (when signed in) | No | App functionality | Unity Authentication & platform account |
 | User Content > Other (game progress) | Yes (when signed in) | No | App functionality | Unity Cloud Save |
+| User Content > Other (ranking name & score) | Yes (when using rankings) | No | App functionality | Unity Leaderboards |
 | Usage Data > Product Interaction | Yes | Yes | Advertising, Analytics | AdMob & Firebase |
 | Diagnostics > Crash & Performance | Yes | No | App functionality | Firebase |
 | Purchases | Yes | No | App functionality | Store (StoreKit / Play Billing) |
@@ -145,7 +154,8 @@ The table below shows this policy aligns with each store's privacy disclosure (A
 - **Unity Purchasing (IAP)**
 - **Firebase** (Google Analytics for Firebase, Crashlytics)
 - **Unity Mobile Notifications** (local notifications)
-- **Unity Gaming Services** (Unity Authentication, Cloud Save, Cloud Code, Leaderboards) — **optional sign-in and cloud save for competitive content such as World Boss.** Platform providers: iOS **Sign in with Apple**, Android **Google Play Games**.
+- **Unity Gaming Services** (Unity Authentication, Cloud Save, Leaderboards) — **optional sign-in, cloud save, and rankings for competitive content.** Platform providers: iOS **Apple Game Center**, Android **Google Play Games**.
+- **Five ranking categories**: highest floor · power · prestige count · codex level · relic score (display only, no rewards)
 - Sign-in is **optional** and the core game is playable without an account. **Purely anonymous accounts are not used in production.**
 
 Also see our [Terms of Service](/games/hunter-tower/terms).

@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerPrivacyKo: GamePolicy = {
   title: 'Hunter Tower 개인정보처리방침',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-15',
+  lastUpdated: '2026-07-26',
   introNote: [{ type: 'text', text: '본 개인정보처리방침은 Google Play, Apple App Store, ONE store 등 모든 배포 채널에 공통 적용됩니다.' }],
   blocks: fromMarkdown(`### 1. 총칙
 \`알 게임즈\`(이하 "운영자")는 모바일 게임 **Hunter Tower**(이하 "본 앱") 서비스 제공과 관련하여 「개인정보 보호법」 등 관련 법령을 준수하며, 이용자의 개인정보가 어떤 목적으로 어떻게 처리되는지 알기 쉽게 안내합니다.
@@ -15,7 +15,7 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 - 이메일: \`cs.team@rgames.co.kr\`
 
 ### 2. 수집·이용하는 정보
-본 앱은 **회원가입을 요구하지 않는 방식**으로 제공됩니다. 이메일·실명 등 이용자가 직접 입력하는 계정 정보는 운영자가 수집하지 않습니다.
+본 앱은 **회원가입을 요구하지 않는 방식**으로 제공됩니다. 이메일·실명 등 이용자가 직접 입력하는 계정 정보는 운영자가 수집하지 않습니다. 다만 **랭킹에 참여하는 경우에 한해 이용자가 직접 입력한 표시명(닉네임)** 이 처리되며, 해당 표시명은 랭킹 목록을 통해 다른 이용자에게 공개됩니다(아래 2.6).
 
 다만 아래 항목은 **서비스 제공·광고·결제·기기 환경** 등의 이유로 **자동으로 생성·수집되거나 제3자(광고·앱스토어·결제)** 가 처리할 수 있습니다.
 
@@ -44,19 +44,26 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 - 고객지원 이메일 등으로 **이용자가 직접 제공**하는 내용(문의 내용, 연락 가능한 이메일 주소 등)
 
 ### 2.6 계정 로그인 및 클라우드 저장 정보(선택)
-- 본 앱은 **월드보스 등 일부 경쟁·랭킹 콘텐츠** 이용 시 **플랫폼 계정 로그인**을 요청합니다. **핵심 게임(성장·전투·상점 등)은 로그인 없이 이용할 수 있으며**, 로그인은 선택 사항입니다.
+- 본 앱은 **랭킹·경쟁 콘텐츠** 이용 시 **플랫폼 계정 로그인**을 요청합니다. **핵심 게임(성장·전투·상점 등)은 로그인 없이 이용할 수 있으며**, 로그인은 선택 사항입니다.
 - 로그인 및 클라우드 저장은 **Unity Gaming Services(Unity Authentication, Cloud Save, Leaderboards 등)** 를 통해 제공되며, 이때 아래 정보가 처리될 수 있습니다:
 - **Unity Authentication 플레이어 ID**(권위 있는 계정 식별자)
-- **플랫폼 계정 식별자** — iOS: **Sign in with Apple**, Android: **Google Play Games**
-- **랭킹 표시명** 및 **경쟁 점수·시즌 기록**
+- **플랫폼 계정 식별자** — iOS: **Apple Game Center**, Android: **Google Play Games**
+- **랭킹 표시명(닉네임)** 및 **랭킹 점수**
 - **클라우드에 동기화된 게임 진행 데이터**(위 2.2)
 - 계정 및 랭킹은 **플랫폼 계정 단위**로 관리됩니다. Android↔iOS 등 **서로 다른 플랫폼 간 계정 이전·병합은 지원되지 않습니다.** 같은 플랫폼 계정으로 재로그인하면 동일 계정이 복원됩니다.
 - 운영자는 개발 편의를 위한 경우를 제외하고 **순수 익명 계정을 프로덕션에서 사용하지 않습니다.**
 
+### 2.7 랭킹(리더보드) 정보
+- 본 앱은 **최고 층, 전투력, 계승 횟수, 도감 레벨, 유물 점수** 항목의 랭킹을 제공합니다. 각 점수는 **이용자의 게임 진행 데이터에서 계산된 값**이며, 별도의 개인 식별 정보를 포함하지 않습니다.
+- 랭킹 점수는 **Unity Gaming Services의 Leaderboards** 에 저장되며, **랭킹 표시명(닉네임)·순위·점수는 다른 이용자에게 공개**됩니다.
+- **랭킹 화면에 진입하지 않으면 점수가 전송되지 않습니다.** 점수 제출은 랭킹 화면에 처음 진입한 시점에 이루어지며, 이후에는 값이 변경된 항목만 전송됩니다.
+- **랭킹 표시명(닉네임)** 은 이용자가 직접 입력하며 Unity Gaming Services 서버에 저장됩니다. 실명·이메일 등 개인 식별 정보를 닉네임으로 사용하지 않을 것을 권장합니다. 닉네임은 앱 내 **설정 화면**에서 언제든 변경할 수 있습니다.
+- 현재 랭킹은 **순위 표시 목적(명예 랭킹)** 이며, 순위에 따른 재화·아이템 보상 지급은 없습니다. 보상형 랭킹(월드보스·길드·경쟁전 등)을 도입하는 경우 본 방침을 갱신합니다.
+
 ### 3. 수집·이용 목적
 - 본 앱 **서비스 제공·기능 유지**(게임 진행 저장, 버그 대응 등)
 - **서비스 개선·오류 진단·안정성 확보**를 위한 앱 이용 통계 분석 및 크래시 진단
-- **클라우드 저장·계정 로그인** 을 통한 진행 복원, **랭킹·경쟁 콘텐츠** 제공 및 보상 지급, 부정 순위 방지
+- **클라우드 저장·계정 로그인** 을 통한 진행 복원, **랭킹·경쟁 콘텐츠** 제공(랭킹 표시명·순위·점수의 공개 표시 포함) 및 부정 순위 방지
 - **맞춤형·비개인화 광고** 표시, 광고 성과 측정, **부정 이용 방지**
 - **인앱 결제** 처리 및 유료 콘텐츠/기능 제공
 - **법령 준수**, 분쟁 대응, 통계(식별 가능성이 낮은 형태로 한정될 수 있음)
@@ -77,15 +84,15 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 | 광고 | Google AdMob (Google LLC) | 배너·전면·보상형 광고 노출 및 성과 측정. 미디에이션을 통해 아래 광고 네트워크의 광고가 노출될 수 있음. |
 | 광고(미디에이션) | AppLovin, Meta Audience Network, Vungle(Liftoff Monetize), Mintegral, Unity Ads | AdMob 미디에이션을 통한 광고 노출·성과 측정. 각 네트워크가 광고 식별자 등을 자체 정책에 따라 처리. |
 | 인앱 결제 | Unity IAP + Google Play / App Store / ONE store | 스토어를 통한 결제 처리 및 영수증 검증. |
-| 계정·클라우드 저장 | Unity Gaming Services (Unity Authentication, Cloud Save, Cloud Code, Leaderboards — Unity Technologies) | 플랫폼 계정 로그인, 게임 진행 클라우드 동기화, 랭킹·경쟁 콘텐츠 처리(로그인 시). |
-| 플랫폼 계정 | Sign in with Apple (iOS), Google Play Games (Android) | 로그인 시 플랫폼 계정 인증. 각 플랫폼 사업자 정책에 따라 처리. |
+| 계정·클라우드 저장·랭킹 | Unity Gaming Services (Unity Authentication, Cloud Save, Leaderboards — Unity Technologies) | 플랫폼 계정 로그인, 게임 진행 클라우드 동기화, 랭킹 표시명·순위·점수 저장 및 조회(로그인 시). 보상형 랭킹 도입 시 Cloud Code 가 추가로 사용될 수 있습니다. |
+| 플랫폼 계정 | Apple Game Center (iOS), Google Play Games (Android) | 로그인 시 플랫폼 계정 인증. 각 플랫폼 사업자 정책에 따라 처리. |
 | 게임 엔진 | Unity (Unity Technologies) | 빌드·런타임에 따른 기술적 정보 처리 가능(자사 정책 준수). |
 | 분석·크래시 | Firebase (Google Analytics for Firebase, Crashlytics — Google LLC) | 앱 이용 통계 분석 및 비정상 종료(크래시) 진단. 데이터는 Google이 자체 정책에 따라 처리. |
 
 각 사업자 개인정보처리방침(변경될 수 있음):
 - Google (AdMob·Firebase·Google Play Games): [Google 개인정보처리방침](https://policies.google.com/privacy)
 - Unity (Unity Ads·Unity Gaming Services 포함): [Unity 개인정보처리방침](https://unity.com/legal/privacy-policy) · [Unity 게임 플레이어 개인정보](https://unity.com/legal/game-player-and-app-user-privacy-policy)
-- Apple (Sign in with Apple): [Apple 개인정보처리방침](https://www.apple.com/legal/privacy/)
+- Apple (Game Center): [Apple 개인정보처리방침](https://www.apple.com/legal/privacy/)
 - AppLovin: [AppLovin 개인정보](https://www.applovin.com/privacy/)
 - Meta Audience Network: [Meta 개인정보](https://www.facebook.com/about/privacy)
 - Vungle / Liftoff Monetize: [Vungle 개인정보](https://vungle.com/privacy/)
@@ -102,6 +109,7 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 이용자는 개인정보 보호법 등에 따라 **열람·정정·삭제·처리정지** 등을 요구할 수 있습니다.
 - **로그인하지 않은 경우:** 진행 데이터는 기기에만 있으므로 **앱 삭제**로 제거할 수 있습니다.
 - **로그인한 경우(계정·클라우드 저장):** 앱 내 **설정 화면의 계정 삭제 기능** 또는 아래 이메일 문의를 통해 **계정 및 클라우드 저장 데이터의 삭제**를 요청할 수 있습니다. 요청 시 Unity Authentication 계정과 연결된 클라우드 저장·랭킹 데이터가 삭제됩니다. (앱 삭제·로그아웃만으로는 서버 계정 데이터가 삭제되지 않습니다.)
+- **랭킹 표시명(닉네임) 정정:** 앱 내 **설정 화면 → 닉네임 변경**에서 언제든 수정할 수 있습니다.
 - **광고·추적 관련:**
 - **Android:** 설정 → Google → 광고 또는 개인정보 보호 설정에서 **광고 ID 재설정·맞춤 광고 옵트아웃** 등
 - **iOS:** 설정 → 개인 정보 보호 및 보안 → **추적(Tracking)**, **Apple 광고** 등에서 추적 허용 여부 변경
@@ -137,6 +145,7 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 | 식별자 > 기기/광고 ID | 예 | 예 | 광고, 분석 | AdMob·미디에이션 |
 | 식별자 > 사용자 ID | 예(로그인 시) | 아니요 | 앱 기능 | Unity Authentication·플랫폼 계정 |
 | 사용자 콘텐츠 > 기타(게임 진행) | 예(로그인 시) | 아니요 | 앱 기능 | Unity Cloud Save |
+| 사용자 콘텐츠 > 기타(랭킹 표시명·점수) | 예(랭킹 이용 시) | 아니요 | 앱 기능 | Unity Leaderboards |
 | 사용 데이터 > 제품 상호작용 | 예 | 예 | 광고, 분석 | AdMob·Firebase |
 | 진단 > 충돌·성능 데이터 | 예 | 아니요 | 앱 기능·개선 | Firebase |
 | 구매 내역 | 예 | 아니요 | 앱 기능 | 스토어(StoreKit / Play Billing) |
@@ -149,7 +158,8 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 - **Unity Purchasing (IAP)**
 - **Firebase** (Google Analytics for Firebase, Crashlytics)
 - **Unity Mobile Notifications** (로컬 알림)
-- **Unity Gaming Services** (Unity Authentication, Cloud Save, Cloud Code, Leaderboards) — **월드보스 등 경쟁 콘텐츠용 선택 로그인·클라우드 저장.** 플랫폼 provider: iOS **Sign in with Apple**, Android **Google Play Games**.
+- **Unity Gaming Services** (Unity Authentication, Cloud Save, Leaderboards) — **랭킹·경쟁 콘텐츠용 선택 로그인·클라우드 저장·랭킹.** 플랫폼 provider: iOS **Apple Game Center**, Android **Google Play Games**.
+- **랭킹 항목 5종**: 최고 층 · 전투력 · 계승 횟수 · 도감 레벨 · 유물 점수 (전부 순위 표시 전용, 보상 없음)
 - 로그인은 **선택**이며 핵심 게임은 계정 없이 이용 가능. **순수 익명 계정은 프로덕션 미사용.**
 
 [이용약관](/games/hunter-tower/terms)도 함께 확인해 주세요.
