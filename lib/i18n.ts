@@ -64,12 +64,30 @@ export const CONTACT = {
   oneStore: 'https://m.onestore.co.kr/v2/ko-kr/app/0001006140',
 };
 
-export const SCREENSHOTS = [
-  'https://play-lh.googleusercontent.com/xWnm85sDlXAsd9AkdqcTnOx2q9xszIuoXpsc5LHm7Zs30_n283hAKTbMndBCWJ4Qou5TR2r7JOXrnShTAojEAA=w526-h296',
-  'https://play-lh.googleusercontent.com/1eVNBYpMIxNTMTXR9oGU0Q5NqLZ1z82G7FokdkPsCTFcT9I1GAXjDi2vjYj1DuW_RPOdj3OmTFu_xd5WZJwbk8U=w526-h296',
-  'https://play-lh.googleusercontent.com/xGXomCGUFyXzdIbcF-FF51317I9Q4_uOWjx3wEn9WE6JYkUhAyJgYKnn0TcyG7C2vjjhFHCJX1g5zmZc1c0s2Q=w526-h296',
-  'https://play-lh.googleusercontent.com/gfSRJdOBERZ6Y_SJidZAf-eewyfP_R3G6xDDNSyP0KW7bPPM0E27UY9GZ-1QA625lpDx4PfR-gk1cHMpnWB48g=w526-h296',
-];
+export const SCREENSHOTS: Record<Lang, string[]> = {
+  ko: [
+    '/hunter-tower/screenshots/1-main-ko.png',
+    '/hunter-tower/screenshots/2-tower-ko.png',
+    '/hunter-tower/screenshots/3-successor-ko.png',
+    '/hunter-tower/screenshots/4-hunter-ko.png',
+    '/hunter-tower/screenshots/5-relic-ko.png',
+    '/hunter-tower/screenshots/6-auto-battle-ko.png',
+    '/hunter-tower/screenshots/7-reward-ko.png',
+    '/hunter-tower/screenshots/8-ranking-ko.png',
+    '/hunter-tower/screenshots/9-download-ko.png',
+  ],
+  en: [
+    '/hunter-tower/screenshots/1-main-en.png',
+    '/hunter-tower/screenshots/2-tower-en.png',
+    '/hunter-tower/screenshots/3-successor-en.png',
+    '/hunter-tower/screenshots/4-hunter-en.png',
+    '/hunter-tower/screenshots/5-relic-en.png',
+    '/hunter-tower/screenshots/6-auto-battle-en.png',
+    '/hunter-tower/screenshots/7-reward-en.png',
+    '/hunter-tower/screenshots/8-ranking-en.png',
+    '/hunter-tower/screenshots/9-download-en.png',
+  ],
+};
 
 export const HT_ICON =
   'https://play-lh.googleusercontent.com/LjJRnWoebLGhi2mhmUq2aO-ozVbBls8KIEYHd7hiQEEmbJzTdiuJr-tUPW2oopDzqwhZFKv4opnqCVt8vLCzTg=w240-h240';

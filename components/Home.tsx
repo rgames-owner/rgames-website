@@ -7,7 +7,7 @@ import { CONTACT, HT_ICON, SCREENSHOTS } from '@/lib/i18n';
 import { getGame } from '@/lib/games';
 
 export default function Home() {
-  const { t } = useLang();
+  const { lang, t } = useLang();
   const ht = getGame('hunter-tower')!;
 
   return (
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
 
           <div className="shots">
-            {SCREENSHOTS.map((src, i) => (
+            {SCREENSHOTS[lang].map((src, i) => (
               // eslint-disable-next-line @next/next/no-img-element
               <img key={src} src={src} alt={`Hunter Tower screenshot ${i + 1}`} />
             ))}
