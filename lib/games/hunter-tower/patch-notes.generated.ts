@@ -1,6 +1,6 @@
 /* AUTO-GENERATED — do not edit by hand.
  * Run: npm run sync:patch-notes
- * Generated: 2026-07-21T00:48:22.449Z
+ * Generated: 2026-08-11T17:20:37.367Z
  * Sources:
  *   ../Hunter_Tower/Assets/Project/Localization/Tables/UI.csv
  *   ../Hunter_Tower/Assets/Project/ScriptableObjects/Data/PatchNoteTable.asset
@@ -10,6 +10,20 @@ import type { GamePatchNotes } from '@/lib/games/types';
 export const hunterTowerPatchNotes: GamePatchNotes = {
   title: { ko: "업데이트 내역", en: "Update History" },
   entries: [
+    {
+      version: "1.1.0",
+      body: {
+        ko: "• 명예 랭킹을 추가했습니다. 최고 층·전투력 등 다양한 부문에서 경쟁하세요.\n• 랭킹 도입에 맞춰 계승 횟수가 0으로 초기화되었습니다. 계승으로 얻은 보상과 성장은 그대로 유지됩니다.\n• 몬스터 도감을 추가했습니다. 도감 레벨을 올려 영구 능력치 보너스를 획득하세요.\n• 프로필 화면을 개편하고 닉네임·국가 설정을 추가했습니다.\n• 광고 시청 버프를 추가했습니다. 활성화된 버프는 게임 화면에서 바로 확인할 수 있습니다.\n• 방치 보상을 개편했습니다. 이제 플레이 중에도 보상이 계속 쌓입니다.\n• 특수강화·도감 튜토리얼을 추가했습니다.",
+        en: "• Added Honor Rankings. Compete in categories like highest floor and combat power.\n• Succession counts were reset to 0 for the ranking launch. Rewards and growth earned from successions are kept.\n• Added the Monster Codex. Level it up to earn permanent stat bonuses.\n• Revamped the profile screen and added nickname and country settings.\n• Added ad-viewing buffs. Active buffs are shown right on the game screen.\n• Reworked idle rewards. They now keep accumulating even while you play.\n• Added SP Enhance and Codex tutorials.",
+      },
+    },
+    {
+      version: "1.0.9",
+      body: {
+        ko: "• 광고 관련 버그와 오류를 수정했습니다.\n• UI를 개선했습니다.\n• 앱 크래시 안정성을 개선했습니다.\n• Google Play 인앱 업데이트 기능을 추가했습니다.",
+        en: "• Fixed ad-related bugs and errors.\n• Improved the UI.\n• Improved app stability and reduced crashes.\n• Added Google Play in-app updates.",
+      },
+    },
     {
       version: "1.0.8",
       body: {
