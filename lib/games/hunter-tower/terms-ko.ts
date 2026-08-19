@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerTermsKo: GamePolicy = {
   title: 'Hunter Tower 이용약관',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-09',
+  lastUpdated: '2026-08-15',
   introNote: [{ type: 'text', text: '본 이용약관은 Google Play, Apple App Store, ONE store 등 모든 배포 채널에 공통 적용됩니다.' }],
   blocks: fromMarkdown(`### 제1조 (목적)
 본 약관은 \`알 게임즈\`(이하 "운영자")가 제공하는 모바일 게임 **Hunter Tower**(이하 "본 앱") 서비스의 이용 조건 및 절차, 운영자와 이용자 간의 권리·의무를 규정함을 목적으로 합니다.
@@ -54,6 +54,7 @@ export const hunterTowerTermsKo: GamePolicy = {
 4. 환불은 각 스토어의 환불 정책 및 관련 법령에 따릅니다:
 - Google Play: [Google Play 환불](https://support.google.com/googleplay/answer/2479637)
 - Apple App Store: [Apple 환불](https://support.apple.com/ko-kr/HT204084)
+- ONE store: [원스토어 고객센터](https://m.onestore.co.kr/mobilepoc/web/customer/faqList.omp)
 5. **미성년자 결제:** 미성년자인 이용자가 법정대리인의 동의 없이 유료 콘텐츠를 결제한 경우, 이용자 또는 법정대리인은 관련 법령(「민법」 등)에 따라 해당 결제를 취소할 수 있습니다. 다만 법정대리인의 동의가 있었거나, 미성년자가 자유로이 처분하도록 허락된 재산 범위 내의 결제 등 법령상 취소가 제한되는 경우는 예외로 합니다.
 6. **확률형 유료 콘텐츠:** 확률에 따라 결과가 결정되는 유료 콘텐츠(예: 상자·뽑기 등)의 경우, 운영자는 관련 법령(「게임산업진흥에 관한 법률」 등)에 따라 획득 확률 정보를 앱 내에서 확인할 수 있도록 제공합니다.
 

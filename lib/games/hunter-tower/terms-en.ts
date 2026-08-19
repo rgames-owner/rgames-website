@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerTermsEn: GamePolicy = {
   title: 'Hunter Tower Terms of Service',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-09',
+  lastUpdated: '2026-08-15',
   introNote: [{ type: 'text', text: 'These Terms apply to all distribution channels including Google Play, the Apple App Store, and ONE store.' }],
   blocks: fromMarkdown(`### Article 1. Purpose
 These Terms of Service ("**Terms**") govern the use of the mobile game **Hunter Tower** (the "**App**") provided by \`R Games\` ("**we**", "**us**", or "**operator**") and define the rights and obligations between the operator and users.
@@ -54,6 +54,7 @@ Users must **not**:
 4. Refunds are subject to the refund policies of the applicable store and to applicable law:
 - Google Play: [Google Play refunds](https://support.google.com/googleplay/answer/2479637)
 - Apple App Store: [Apple refunds](https://support.apple.com/en-us/HT204084)
+- ONE store: [ONE store customer center](https://m.onestore.co.kr/mobilepoc/web/customer/faqList.omp)
 5. **Minors' purchases:** If a minor makes a purchase without the consent of a legal guardian, the user or the legal guardian may cancel the purchase in accordance with applicable law (e.g., the Korean Civil Act), except where cancellation is restricted by law (e.g., where guardian consent was given, or the purchase falls within property the minor was permitted to dispose of freely).
 6. **Probability-based Paid Content:** For Paid Content whose outcome is determined by chance (e.g., loot boxes or gacha), we provide the applicable drop-rate information within the App in accordance with applicable law (e.g., the Korean Game Industry Promotion Act).
 
