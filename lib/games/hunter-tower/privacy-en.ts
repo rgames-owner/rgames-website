@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerPrivacyEn: GamePolicy = {
   title: 'Hunter Tower Privacy Policy',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-26',
+  lastUpdated: '2026-08-20',
   introNote: [{ type: 'text', text: 'This Privacy Policy applies to all distribution channels including Google Play, the Apple App Store, and ONE store.' }],
   blocks: fromMarkdown(`### 1. Introduction
 \`R Games\` ("**we**", "**us**", or "**operator**") operates the mobile game **Hunter Tower** (the "**App**"). We explain how information is handled in connection with the App in line with applicable privacy laws (including, where relevant, the laws of the Republic of Korea).
@@ -22,7 +22,7 @@ However, the following categories may be **generated automatically** or **proces
 ### 2.1 Device and app usage information
 - Device model, OS version, app version, language, screen resolution, and similar data needed to **run the App** and maintain compatibility
 - **Advertising identifiers** (Advertising ID / GAID on Android, IDFA on iOS) for **serving and measuring ads and fraud prevention**. On iOS, use is subject to your **App Tracking Transparency (ATT)** consent and platform settings.
-- **Ad-related events** such as impressions, clicks, and rewarded ad completion, as defined by ad network policies
+- **Ad-related events** such as impressions, clicks, and rewarded ad completion, as defined by ad network policies. We may record **impression-level revenue data provided by the ad mediation SDK** (ad network, ad format, estimated revenue) in Firebase Analytics for ad operations statistics and **fraud (invalid traffic) prevention**.
 - **App usage analytics** (app instance identifier, in-app event logs, coarse IP-based location, etc.), processed via **Firebase Analytics** for usage statistics and service improvement
 - **Crash diagnostics** (error logs, device state, OS and app version, etc.), processed via **Firebase Crashlytics** for stability and error diagnosis
 - **Default Firebase collection:** Firebase Analytics and Firebase Crashlytics are enabled by default when the App starts. The SDKs may automatically process app-usage events and may collect or send crash diagnostics when a crash occurs or the App is next launched.
@@ -81,8 +81,8 @@ The App uses the **third-party services (SDKs)** below. Each provider processes 
 
 | Category | Service | Processing |
 | --- | --- | --- |
-| Ads | Google AdMob (Google LLC) | Banner, interstitial, and rewarded ads and measurement. Mediation may show ads from the networks below. |
-| Ads (mediation) | AppLovin, Meta Audience Network, Vungle (Liftoff Monetize), Mintegral, Unity Ads | Ad serving and measurement via AdMob mediation. Each network processes advertising identifiers under its own policy. |
+| Ads (mediation platform) | Unity LevelPlay (ironSource — Unity Technologies) | Banner, interstitial, and rewarded ads, bidding, and measurement. Mediation may show ads from the networks below. |
+| Ads (networks) | Unity Ads, ironSource Ads, Meta Audience Network, Liftoff Monetize (Vungle), Yandex Ads | Ad serving and measurement via LevelPlay mediation. Each network processes advertising identifiers under its own policy. Networks may be added or removed operationally. |
 | In-app purchases | Unity IAP + Google Play / App Store / ONE store | Purchases and receipt validation processed through the stores. |
 | Account, cloud & ranking | Unity Gaming Services (Unity Authentication, Cloud Save, Leaderboards — Unity Technologies) | Platform sign-in, cloud sync of game progress, and storage/retrieval of ranking name, rank, and score (when signed in). Cloud Code may additionally be used if reward-based rankings are introduced. |
 | Platform accounts | Apple Game Center (iOS), Google Play Games (Android) | Platform account authentication when you sign in, per each platform's policy. |
@@ -90,18 +90,17 @@ The App uses the **third-party services (SDKs)** below. Each provider processes 
 | Analytics & crash | Firebase (Google Analytics for Firebase, Crashlytics — Google LLC) | App usage analytics and crash diagnostics. Data is processed by Google under its own policy. |
 
 Provider privacy policies (subject to change):
-- Google (AdMob, Firebase, Google Play Games): [Google Privacy Policy](https://policies.google.com/privacy)
-- Unity (incl. Unity Ads and Unity Gaming Services): [Unity Privacy Policy](https://unity.com/legal/privacy-policy) · [Unity game player privacy](https://unity.com/legal/game-player-and-app-user-privacy-policy)
+- Google (Firebase, Google Play Games): [Google Privacy Policy](https://policies.google.com/privacy)
+- Unity (incl. Unity LevelPlay, ironSource, Unity Ads, and Unity Gaming Services): [Unity Privacy Policy](https://unity.com/legal/privacy-policy) · [Unity game player privacy](https://unity.com/legal/game-player-and-app-user-privacy-policy) · [ironSource Privacy Policy](https://www.is.com/privacy-policy/)
 - Apple (Game Center): [Apple Privacy Policy](https://www.apple.com/legal/privacy/)
-- AppLovin: [AppLovin Privacy](https://www.applovin.com/privacy/)
 - Meta Audience Network: [Meta Privacy](https://www.facebook.com/about/privacy)
-- Vungle / Liftoff Monetize: [Vungle Privacy](https://vungle.com/privacy/)
-- Mintegral: [Mintegral Privacy](https://www.mintegral.com/en/privacy/)
+- Liftoff Monetize (Vungle): [Liftoff Privacy](https://vungle.com/privacy/)
+- Yandex Ads: [Yandex Privacy](https://yandex.com/legal/confidential/)
 
 We may change processors or their roles; **material changes** will be reflected in this policy when appropriate.
 
 ### 6. International transfers
-Some providers (e.g., Google — including AdMob, Firebase, and Google Play Games — Unity (**Unity Gaming Services, including account, cloud-save, and ranking data**), Apple, AppLovin, Meta, Vungle (Liftoff), Mintegral) may process data on servers **outside your country** (e.g., the United States and other regions). When you sign in, your **account identifier and cloud-saved game data may be processed and stored on servers abroad (e.g., in the United States).** In that case, processing is subject to their **privacy policies** and **safeguards** (such as standard contractual clauses) as described by each provider.
+Some providers (e.g., Google — including Firebase and Google Play Games — Unity (**Unity LevelPlay, ironSource, Unity Ads, and Unity Gaming Services, including account, cloud-save, and ranking data**), Apple, Meta, Liftoff (Vungle), Yandex) may process data on servers **outside your country** (e.g., the United States and other regions). When you sign in, your **account identifier and cloud-saved game data may be processed and stored on servers abroad (e.g., in the United States).** In that case, processing is subject to their **privacy policies** and **safeguards** (such as standard contractual clauses) as described by each provider.
 
 ### 7. Your rights
 Depending on your jurisdiction, you may have rights to **access, correct, delete, or restrict** processing of personal data.
@@ -116,9 +115,10 @@ Contact: \`cs.team@rgames.co.kr\`
 
 ### 8. Ads, similar technologies, and consent
 - **Ad SDKs** may process advertising identifiers and related data.
-- In some regions, including the **EEA, UK, and Switzerland**, an advertising-related consent or choice UI, such as **Google UMP**, may be shown.
+- Users in the **EEA, UK, and Switzerland** are shown an **in-app ad privacy consent dialog** on first launch. If you **agree**, your device's advertising identifier is used for **personalized ads**; if you **decline**, **non-personalized ads** are shown. Declining does not affect gameplay or ad rewards. Your choice is stored only on your device and can be changed at any time (including withdrawing consent) in **Settings → Ad Privacy Options** in the App. Region is determined from the SIM/network country or the device's region setting.
 - On iOS, if the App requests permission through **App Tracking Transparency (ATT)**, the system prompt asks whether the App may access IDFA and track activity across other companies' apps and websites. You may decline and continue using the App; cross-app tracking, ad personalization, and ad measurement may then be limited.
-- Google UMP and iOS ATT apply to advertising and tracking choices. They are not separate consent or opt-out controls for Firebase Analytics or Firebase Crashlytics, and changing a UMP or ATT choice does not disable Firebase collection.
+- The in-app ad privacy consent dialog and iOS ATT apply to advertising and tracking choices. They are not separate consent or opt-out controls for Firebase Analytics or Firebase Crashlytics, and changing an ad consent or ATT choice does not disable Firebase collection.
+- To prevent ad fraud (invalid traffic), the App may evaluate on-device signals such as **abnormal device clock changes, emulator environments, and abnormal ad-click frequency** and temporarily limit ad serving. This evaluation happens on the device and does not transmit additional personal data externally.
 - The App currently does not provide a separate in-app setting that lets users directly enable or disable Firebase Analytics or Firebase Crashlytics collection.
 
 ### 9. Children
@@ -130,6 +130,10 @@ We endeavor to apply **reasonable measures** (minimizing data, signing local-sav
 ### 11. Changes to this policy
 We may update this policy when laws, the App, or SDKs change. We will post the **effective date** and, where appropriate, summarize **material changes** on this page.
 
+**Revision history**
+- **2026-08-20:** Switched the ad platform from Google AdMob to **Unity LevelPlay (ironSource) mediation** (from App version 1.1.2). Replaced Google UMP with an **in-app ad privacy consent dialog**, and updated the ad network list (Unity Ads, ironSource Ads, Meta Audience Network, Liftoff Monetize, Yandex Ads), international-transfer providers, and Appendices A and B. Added ad-fraud prevention wording (Section 8).
+- **2026-07-26:** Added account sign-in, cloud save, and rankings (Unity Gaming Services).
+
 ### 12. Contact
 - **Email:** \`cs.team@rgames.co.kr\`
 
@@ -138,11 +142,11 @@ The table below shows this policy aligns with each store's privacy disclosure (A
 
 | Data type | Collected | Tracking (linked with other apps/web) | Purpose | Source |
 | --- | --- | --- | --- | --- |
-| Identifiers > Device/Ad ID | Yes | Yes | Advertising, Analytics | AdMob & mediation |
+| Identifiers > Device/Ad ID | Yes | Yes | Advertising, Analytics | Unity LevelPlay & ad networks |
 | Identifiers > User ID | Yes (when signed in) | No | App functionality | Unity Authentication & platform account |
 | User Content > Other (game progress) | Yes (when signed in) | No | App functionality | Unity Cloud Save |
 | User Content > Other (ranking name & score) | Yes (when using rankings) | No | App functionality | Unity Leaderboards |
-| Usage Data > Product Interaction | Yes | Yes | Advertising, Analytics | AdMob & Firebase |
+| Usage Data > Product Interaction | Yes | Yes | Advertising, Analytics | Unity LevelPlay & Firebase |
 | Diagnostics > Crash & Performance | Yes | No | App functionality | Firebase |
 | Purchases | Yes | No | App functionality | Store (StoreKit / Play Billing) |
 
@@ -150,7 +154,8 @@ The table below shows this policy aligns with each store's privacy disclosure (A
 - If you add or change SDKs, update **Sections 2, 5, and 6**, this mapping, and the store disclosures together.
 
 ### Appendix B. Technical setup observed in this project (reference)
-- **Google Mobile Ads (AdMob)** with mediation adapters: **AppLovin, Meta Audience Network, Vungle (Liftoff Monetize), Mintegral, Unity Ads**
+- **Unity LevelPlay (ironSource SDK)** with network adapters: **Unity Ads, ironSource Ads, Meta Audience Network, Liftoff Monetize (Vungle), Yandex Ads** (from 2026-08-20, App 1.1.2 — earlier versions used Google AdMob mediation)
+- **In-app ad privacy consent dialog** (EEA, UK, Switzerland) + iOS **App Tracking Transparency**
 - **Unity Purchasing (IAP)**
 - **Firebase** (Google Analytics for Firebase, Crashlytics)
 - **Unity Mobile Notifications** (local notifications)

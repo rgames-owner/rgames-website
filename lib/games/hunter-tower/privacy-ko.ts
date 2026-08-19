@@ -4,7 +4,7 @@ import { fromMarkdown } from '@/lib/games/fromMarkdown';
 export const hunterTowerPrivacyKo: GamePolicy = {
   title: 'Hunter Tower 개인정보처리방침',
   effectiveDate: '2026-05-06',
-  lastUpdated: '2026-07-26',
+  lastUpdated: '2026-08-20',
   introNote: [{ type: 'text', text: '본 개인정보처리방침은 Google Play, Apple App Store, ONE store 등 모든 배포 채널에 공통 적용됩니다.' }],
   blocks: fromMarkdown(`### 1. 총칙
 \`알 게임즈\`(이하 "운영자")는 모바일 게임 **Hunter Tower**(이하 "본 앱") 서비스 제공과 관련하여 「개인정보 보호법」 등 관련 법령을 준수하며, 이용자의 개인정보가 어떤 목적으로 어떻게 처리되는지 알기 쉽게 안내합니다.
@@ -22,7 +22,7 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 ### 2.1 기기 및 앱 이용 정보
 - 기기 모델, OS 버전, 앱 버전, 언어 설정, 화면 해상도 등 **앱 실행·호환성**에 필요한 정보
 - **광고 식별자**(Android: 광고 ID(GAID), iOS: 광고 식별자(IDFA)) — **광고 표시·성과 측정·사기 방지** 등에 사용될 수 있음. iOS에서는 **앱 추적 투명성(App Tracking Transparency, ATT)** 동의 및 플랫폼 설정에 따라 사용이 제한됩니다.
-- 광고 노출·클릭·보상형 광고 완료 여부 등 **광고 관련 이벤트**(광고 네트워크 정책에 따름)
+- 광고 노출·클릭·보상형 광고 완료 여부 등 **광고 관련 이벤트**(광고 네트워크 정책에 따름). 운영자는 광고 미디에이션 SDK 가 제공하는 **노출 단위 수익 정보(광고 네트워크·형식·추정 수익)** 를 Firebase Analytics 로 기록하여 광고 운영 통계 및 **부정 이용(무효 트래픽) 방지**에 활용할 수 있습니다.
 - **앱 이용 분석 정보**(앱 인스턴스 식별자, 게임 내 이벤트 이용 기록, IP 기반의 대략적 위치 등) — **이용 통계 분석·서비스 개선**을 위해 **Firebase Analytics**를 통해 처리될 수 있음
 - **비정상 종료(크래시) 진단 정보**(오류 로그, 기기 상태, OS·앱 버전 등) — **오류 진단·안정성 개선**을 위해 **Firebase Crashlytics**를 통해 처리될 수 있음
 - **Firebase 기본 수집:** Firebase Analytics와 Firebase Crashlytics는 앱 실행 시 기본적으로 활성화됩니다. SDK는 앱 이용 이벤트를 자동으로 처리할 수 있으며, 비정상 종료가 발생하거나 앱을 다시 실행할 때 크래시 진단 정보를 자동으로 수집·전송할 수 있습니다.
@@ -81,8 +81,8 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 
 | 구분 | 서비스 | 처리 내용 |
 | --- | --- | --- |
-| 광고 | Google AdMob (Google LLC) | 배너·전면·보상형 광고 노출 및 성과 측정. 미디에이션을 통해 아래 광고 네트워크의 광고가 노출될 수 있음. |
-| 광고(미디에이션) | AppLovin, Meta Audience Network, Vungle(Liftoff Monetize), Mintegral, Unity Ads | AdMob 미디에이션을 통한 광고 노출·성과 측정. 각 네트워크가 광고 식별자 등을 자체 정책에 따라 처리. |
+| 광고(미디에이션 플랫폼) | Unity LevelPlay (ironSource — Unity Technologies) | 배너·전면·보상형 광고 노출, 입찰(비딩) 및 성과 측정. 미디에이션을 통해 아래 광고 네트워크의 광고가 노출될 수 있음. |
+| 광고(네트워크) | Unity Ads, ironSource Ads, Meta Audience Network, Liftoff Monetize(Vungle), Yandex Ads | LevelPlay 미디에이션을 통한 광고 노출·성과 측정. 각 네트워크가 광고 식별자 등을 자체 정책에 따라 처리. 네트워크는 운영상 추가·제외될 수 있음. |
 | 인앱 결제 | Unity IAP + Google Play / App Store / ONE store | 스토어를 통한 결제 처리 및 영수증 검증. |
 | 계정·클라우드 저장·랭킹 | Unity Gaming Services (Unity Authentication, Cloud Save, Leaderboards — Unity Technologies) | 플랫폼 계정 로그인, 게임 진행 클라우드 동기화, 랭킹 표시명·순위·점수 저장 및 조회(로그인 시). 보상형 랭킹 도입 시 Cloud Code 가 추가로 사용될 수 있습니다. |
 | 플랫폼 계정 | Apple Game Center (iOS), Google Play Games (Android) | 로그인 시 플랫폼 계정 인증. 각 플랫폼 사업자 정책에 따라 처리. |
@@ -90,18 +90,17 @@ export const hunterTowerPrivacyKo: GamePolicy = {
 | 분석·크래시 | Firebase (Google Analytics for Firebase, Crashlytics — Google LLC) | 앱 이용 통계 분석 및 비정상 종료(크래시) 진단. 데이터는 Google이 자체 정책에 따라 처리. |
 
 각 사업자 개인정보처리방침(변경될 수 있음):
-- Google (AdMob·Firebase·Google Play Games): [Google 개인정보처리방침](https://policies.google.com/privacy)
-- Unity (Unity Ads·Unity Gaming Services 포함): [Unity 개인정보처리방침](https://unity.com/legal/privacy-policy) · [Unity 게임 플레이어 개인정보](https://unity.com/legal/game-player-and-app-user-privacy-policy)
+- Google (Firebase·Google Play Games): [Google 개인정보처리방침](https://policies.google.com/privacy)
+- Unity (Unity LevelPlay·ironSource·Unity Ads·Unity Gaming Services 포함): [Unity 개인정보처리방침](https://unity.com/legal/privacy-policy) · [Unity 게임 플레이어 개인정보](https://unity.com/legal/game-player-and-app-user-privacy-policy) · [ironSource 개인정보](https://www.is.com/privacy-policy/)
 - Apple (Game Center): [Apple 개인정보처리방침](https://www.apple.com/legal/privacy/)
-- AppLovin: [AppLovin 개인정보](https://www.applovin.com/privacy/)
 - Meta Audience Network: [Meta 개인정보](https://www.facebook.com/about/privacy)
-- Vungle / Liftoff Monetize: [Vungle 개인정보](https://vungle.com/privacy/)
-- Mintegral: [Mintegral 개인정보](https://www.mintegral.com/en/privacy/)
+- Liftoff Monetize (Vungle): [Liftoff 개인정보](https://vungle.com/privacy/)
+- Yandex Ads: [Yandex 개인정보](https://yandex.com/legal/confidential/)
 
 운영자는 **위탁 업무의 내용·수탁자**를 변경할 수 있으며, 중요한 변경 시 본 방침을 고칩니다.
 
 ### 6. 개인정보의 국외 이전
-Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services — 계정·클라우드 저장·랭킹 데이터 포함**), Apple, AppLovin, Meta, Vungle(Liftoff), Mintegral 등 일부 수탁사는 **해외(미국, 그 외 국가 등)** 에 서버를 두고 정보를 처리할 수 있습니다. 로그인 시 **계정 식별자 및 클라우드 저장 게임 데이터가 국외 서버(예: 미국)에서 처리·보관될 수 있습니다.**
+Google(Firebase·Google Play Games 포함), Unity(**Unity LevelPlay·ironSource·Unity Ads 및 Unity Gaming Services — 계정·클라우드 저장·랭킹 데이터 포함**), Apple, Meta, Liftoff(Vungle), Yandex 등 일부 수탁사는 **해외(미국, 그 외 국가 등)** 에 서버를 두고 정보를 처리할 수 있습니다. 로그인 시 **계정 식별자 및 클라우드 저장 게임 데이터가 국외 서버(예: 미국)에서 처리·보관될 수 있습니다.**
 
 이 경우 해당 사업자의 **개인정보처리방침·이전 조치(표준계약조항 등)** 에 따릅니다.
 
@@ -118,9 +117,10 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 
 ### 8. 광고·유사 기술·동의
 - 본 앱은 **광고 SDK**를 통해 **광고 식별자** 및 관련 정보가 처리될 수 있습니다.
-- **유럽 경제 지역(EEA)·영국·스위스** 등 일부 지역에서는 **Google UMP(사용자 메시징 플랫폼)** 를 통한 광고 관련 동의 또는 선택 UI가 표시될 수 있습니다.
+- **유럽 경제 지역(EEA)·영국·스위스** 이용자에게는 앱 최초 실행 시 **앱 내 광고 개인정보 동의 창**이 표시됩니다. **동의**하면 기기의 광고 식별자를 사용한 **맞춤 광고**가, **거부**하면 **비개인화 광고**가 표시되며, 거부하더라도 게임 이용 및 광고 보상은 동일합니다. 선택 결과는 기기에만 저장되며, 앱 내 **설정 → 광고 개인정보 옵션**에서 언제든 변경(동의 철회 포함)할 수 있습니다. 해당 지역 여부는 SIM·네트워크 국가 또는 기기 지역 설정으로 판정합니다.
 - iOS에서 본 앱이 **앱 추적 투명성(App Tracking Transparency, ATT)** 권한을 요청하는 경우, 해당 시스템 창은 IDFA 접근 및 다른 회사의 앱·웹사이트를 아우르는 추적 허용 여부를 묻습니다. 거부해도 앱은 이용할 수 있으나, 앱 간 추적·광고 개인화·광고 측정이 제한될 수 있습니다.
-- Google UMP와 iOS ATT는 광고 및 추적 선택에 적용됩니다. 이는 Firebase Analytics 또는 Firebase Crashlytics 수집에 대한 별도 동의·거부 수단이 아니며, UMP 또는 ATT 선택을 변경해도 Firebase 수집은 비활성화되지 않습니다.
+- 앱 내 광고 개인정보 동의 창과 iOS ATT는 광고 및 추적 선택에 적용됩니다. 이는 Firebase Analytics 또는 Firebase Crashlytics 수집에 대한 별도 동의·거부 수단이 아니며, 광고 동의 또는 ATT 선택을 변경해도 Firebase 수집은 비활성화되지 않습니다.
+- 운영자는 광고 부정 이용(무효 트래픽) 방지를 위해 **기기 시각의 비정상 변경, 에뮬레이터 환경, 비정상적인 광고 클릭 빈도** 등을 기기 내에서 판정하여 일시적으로 광고 제공을 제한할 수 있습니다. 이 판정은 기기 내부에서 이루어지며 추가적인 개인정보를 외부로 전송하지 않습니다.
 - 현재 본 앱에는 Firebase Analytics 또는 Firebase Crashlytics 수집을 이용자가 직접 켜거나 끄는 별도 앱 내 설정이 없습니다.
 
 ### 9. 아동의 개인정보
@@ -134,6 +134,10 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 ### 11. 방침의 변경
 법령·서비스·SDK 변경 시 본 방침을 수정할 수 있으며, **시행일·주요 변경 사유**를 본 페이지에 게시합니다.
 
+**개정 이력**
+- **2026-08-20:** 광고 플랫폼을 Google AdMob 에서 **Unity LevelPlay(ironSource) 미디에이션**으로 변경(앱 1.1.2 부터). 광고 동의 방식을 Google UMP 에서 **앱 내 광고 개인정보 동의 창**으로 변경하고, 광고 네트워크 목록(Unity Ads·ironSource Ads·Meta Audience Network·Liftoff Monetize·Yandex Ads), 국외 이전 수탁사, 부록 A·B 를 갱신. 광고 부정 이용 방지 판정(8절) 문구 추가.
+- **2026-07-26:** 계정 로그인·클라우드 저장·랭킹(Unity Gaming Services) 관련 내용 추가.
+
 ### 12. 문의
 - **이메일:** \`cs.team@rgames.co.kr\`
 
@@ -142,11 +146,11 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 
 | 데이터 유형 | 수집 | 추적(다른 앱/웹과 결합) | 목적 | 출처 |
 | --- | --- | --- | --- | --- |
-| 식별자 > 기기/광고 ID | 예 | 예 | 광고, 분석 | AdMob·미디에이션 |
+| 식별자 > 기기/광고 ID | 예 | 예 | 광고, 분석 | Unity LevelPlay·광고 네트워크 |
 | 식별자 > 사용자 ID | 예(로그인 시) | 아니요 | 앱 기능 | Unity Authentication·플랫폼 계정 |
 | 사용자 콘텐츠 > 기타(게임 진행) | 예(로그인 시) | 아니요 | 앱 기능 | Unity Cloud Save |
 | 사용자 콘텐츠 > 기타(랭킹 표시명·점수) | 예(랭킹 이용 시) | 아니요 | 앱 기능 | Unity Leaderboards |
-| 사용 데이터 > 제품 상호작용 | 예 | 예 | 광고, 분석 | AdMob·Firebase |
+| 사용 데이터 > 제품 상호작용 | 예 | 예 | 광고, 분석 | Unity LevelPlay·Firebase |
 | 진단 > 충돌·성능 데이터 | 예 | 아니요 | 앱 기능·개선 | Firebase |
 | 구매 내역 | 예 | 아니요 | 앱 기능 | 스토어(StoreKit / Play Billing) |
 
@@ -154,7 +158,8 @@ Google(AdMob·Firebase·Google Play Games 포함), Unity(**Unity Gaming Services
 - SDK를 추가·변경한 경우 본 문서 **2·5·6절**과 위 대응표, 그리고 스토어 신고를 함께 갱신해야 합니다.
 
 ### 부록 B. 본 프로젝트에서 확인된 기술 구성(참고)
-- **Google Mobile Ads (AdMob)** + 미디에이션 어댑터: **AppLovin, Meta Audience Network, Vungle(Liftoff Monetize), Mintegral, Unity Ads**
+- **Unity LevelPlay (ironSource SDK)** + 네트워크 어댑터: **Unity Ads, ironSource Ads, Meta Audience Network, Liftoff Monetize(Vungle), Yandex Ads** (2026-08-20, 앱 1.1.2 부터 — 이전 버전은 Google AdMob 미디에이션)
+- **앱 내 광고 개인정보 동의 창**(EEA·영국·스위스) + iOS **App Tracking Transparency**
 - **Unity Purchasing (IAP)**
 - **Firebase** (Google Analytics for Firebase, Crashlytics)
 - **Unity Mobile Notifications** (로컬 알림)
