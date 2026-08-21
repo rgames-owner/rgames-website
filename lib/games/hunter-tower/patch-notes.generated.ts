@@ -1,6 +1,6 @@
 /* AUTO-GENERATED — do not edit by hand.
  * Run: npm run sync:patch-notes
- * Generated: 2026-08-11T17:20:37.367Z
+ * Generated: 2026-08-21T02:01:26.687Z
  * Sources:
  *   ../Hunter_Tower/Assets/Project/Localization/Tables/UI.csv
  *   ../Hunter_Tower/Assets/Project/ScriptableObjects/Data/PatchNoteTable.asset
@@ -10,6 +10,20 @@ import type { GamePatchNotes } from '@/lib/games/types';
 export const hunterTowerPatchNotes: GamePatchNotes = {
   title: { ko: "업데이트 내역", en: "Update History" },
   entries: [
+    {
+      version: "1.1.2",
+      body: {
+        ko: "• 유물 10종을 추가했습니다. 계승자 액티브 스킬의 쿨타임·지속시간과 계승 시작 골드를 강화합니다.\n• 마일리지 상점을 추가했습니다. 적립한 마일리지로 상품을 교환하세요.\n• 오프라인 자동 등반을 추가했습니다. 접속하지 않은 동안에도 층이 오르고 상자와 재료가 쌓입니다.\n• 강화 배수 ×50과 도감 전체 수령 버튼을 추가했습니다.\n• 계정 연동 확인 팝업 등 UI를 개선했습니다.\n• 밸런스를 조정하고 버그·보안 문제를 수정했습니다.",
+        en: "• Added 10 new Relics that boost Successor active skill cooldowns and durations, plus starting gold after Succession.\n• Added the Mileage shop. Exchange the Mileage you earn for rewards.\n• Added Offline Progress. Floors, chests and materials keep accumulating while you are away.\n• Added a ×50 upgrade multiplier and a Claim All button in the Codex.\n• Improved the UI, including a new account linking confirmation popup.\n• Adjusted balance and fixed bugs and security issues.",
+      },
+    },
+    {
+      version: "1.1.1",
+      body: {
+        ko: "• 광고 시청 중 배경음이 계속 재생되던 문제를 수정했습니다.\n• 후반 밸런스를 조정했습니다.\n• 도감 UI 개선 및 기타 버그를 수정했습니다.",
+        en: "• Fixed background music continuing to play during ads.\n• Adjusted late-game balance.\n• Improved the Codex UI and fixed other bugs.",
+      },
+    },
     {
       version: "1.1.0",
       body: {
