@@ -1,6 +1,6 @@
 /* AUTO-GENERATED — do not edit by hand.
  * Run: npm run sync:patch-notes
- * Generated: 2026-08-21T04:48:27.231Z
+ * Generated: 2026-09-10T15:03:52.525Z
  * Sources:
  *   ../Hunter_Tower/Assets/Project/Localization/Tables/UI.csv
  *   ../Hunter_Tower/Assets/Project/ScriptableObjects/Data/PatchNoteTable.asset
@@ -10,6 +10,27 @@ import type { GamePatchNotes } from '@/lib/games/types';
 export const hunterTowerPatchNotes: GamePatchNotes = {
   title: { ko: "업데이트 내역", en: "Update History" },
   entries: [
+    {
+      version: "1.1.5",
+      body: {
+        ko: "• 스킬 자동 사용(AUTO)을 추가했습니다. 켜 두면 준비된 액티브 스킬을 전투 중 자동으로 사용합니다.\n• 스마트 자동 강화가 스킬도 강화합니다. 유물 Lv.4에서 패시브, Lv.6에서 액티브 스킬 자동 강화가 해금됩니다.\n• 장비 제작 재료를 직접 고르거나 AUTO로 채울 수 있습니다. 한 번 획득한 장비는 합성으로 모두 사용해도 획득 표시가 유지됩니다.\n• 다음에 해금할 헌터를 목록 최상단에 표시하는 설정을 추가했습니다.\n• 몬스터 크기에 맞는 그림자를 추가했습니다.\n• 후반 층 밸런스를 조정하고, 유물 조합 수량 표기 등 여러 문제를 수정했습니다.",
+        en: "• Added Skill AUTO. When enabled, ready active skills are used automatically during combat.\n• Smart Auto-Upgrade now upgrades skills too. Passive skill auto-upgrade unlocks at relic Lv.4 and active skill auto-upgrade at Lv.6.\n• You can now pick crafting materials yourself or fill them with AUTO. Once obtained, equipment stays marked as obtained even after it is fully synthesized.\n• Added a setting that shows the next hunter to unlock at the top of the list.\n• Added ground shadows sized to each monster.\n• Adjusted late-floor balance and fixed relic synthesis quantity display and other issues.",
+      },
+    },
+    {
+      version: "1.1.4",
+      body: {
+        ko: "• 공용 장비를 추가했습니다. 6종 부위의 장비를 제작·연구·합성하고, 장착으로 헌터를 강화하세요.\n• 자동화 엘릭서 유물 2종을 추가했습니다. 계승자 자동생성과 골드 자동강화·헌터 자동해금 기능을 사용할 수 있습니다.\n• 헌터의 기본 능력치와 돌파 효과를 조정해 성장 밸런스를 개편했습니다.\n• 첫 결제 패키지, 자동화 유물 패키지, 엘릭서 정기권과 몬스터 재료 상자를 상점에 추가했습니다.\n• 장비 제작 화면과 장비·유물 획득 연출을 개선했습니다. 유물 조합·재료 교환 오류와 랭킹 반영 지연 등 여러 문제를 수정했습니다.\n\n구매하신 것들에 대한 마일리지 소급이 늦어지고 있습니다! 문의 메일로 UID와 영수증 번호를 알려주시면 지급해드리도록 하겠습니다. 감사합니다.",
+        en: "• Added common equipment. Craft, research, and synthesize equipment for six slots, then equip it to strengthen your hunters.\n• Added two automation Elixir relics. Automatically summon Successors, perform gold upgrades, and unlock hunters.\n• Rebalanced progression by adjusting hunters’ base stats and breakthrough effects.\n• Added a first-purchase pack, automation relic packs, an Elixir pass, and monster material boxes to the shop.\n• Improved the equipment crafting screen and equipment and relic reward animations. Fixed relic synthesis and material exchange issues, ranking update delays, and other bugs.\n\nMileage credits for your past purchases are taking longer than expected! Please send your UID and receipt number to our support email, and we will credit your Mileage. Thank you.",
+      },
+    },
+    {
+      version: "1.1.3",
+      body: {
+        ko: "• 앱이 비정상적으로 종료되는 문제를 긴급 수정했습니다.",
+        en: "• Released an emergency fix for an issue that caused the app to close unexpectedly.",
+      },
+    },
     {
       version: "1.1.2",
       body: {

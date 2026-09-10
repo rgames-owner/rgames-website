@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "sync:patch-notes": "node scripts/sync-hunter-tower-patch-notes.mjs"
+    "sync:patch-notes": "node scripts/sync-hunter-tower-patch-notes.mjs",
+    "test:analytics": "node --test scripts/test-analytics.mjs scripts/test-analytics-auth.mjs"
   },
   "dependencies": {
     "next": "^15.3.0",

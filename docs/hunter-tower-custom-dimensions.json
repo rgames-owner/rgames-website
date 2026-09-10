@@ -1,0 +1,85 @@
+{
+  "property": "properties/543591366",
+  "dimensions": [
+    {
+      "parameterName": "quest_id",
+      "displayName": "HT Quest",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "floor_band",
+      "displayName": "HT Floor Band",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "hunter_band",
+      "displayName": "HT Hunter Band",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "prestige_band",
+      "displayName": "HT Prestige Band",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "placement",
+      "displayName": "HT Placement",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "ad_format",
+      "displayName": "HT Ad Format",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "stage",
+      "displayName": "HT Stage",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "reason",
+      "displayName": "HT Reason",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "product_id",
+      "displayName": "HT Product",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "store",
+      "displayName": "HT Store",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "action",
+      "displayName": "HT Economy Action",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "resource_type",
+      "displayName": "HT Currency",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "amount_band",
+      "displayName": "HT Amount Band",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "balance_band",
+      "displayName": "HT Balance Band",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "source",
+      "displayName": "HT Source",
+      "scope": "EVENT"
+    },
+    {
+      "parameterName": "operation",
+      "displayName": "HT Operation",
+      "scope": "EVENT"
+    }
+  ]
+}
