@@ -66,7 +66,7 @@ test('game reports apply mobile-app filters and ad cost uses its explicit linked
     const groups = body.dimensionFilter.andGroup?.expressions.map(item => item.filter) ?? [body.dimensionFilter.filter];
     const values = name => groups.find(item => item.fieldName === name)?.inListFilter.values;
     if (body.metrics.some(item => item.name === 'advertiserAdCost')) {
-      assert.deepEqual(values('googleAdsCustomerId'), ['2020972848']);
+      assert.deepEqual(values('googleAdsCustomerId'), ['3633238009']);
       assert.equal(values('countryId'), undefined);
       assert.equal(values('operatingSystem'), undefined);
       assert.equal(values('streamId'), undefined);
@@ -223,7 +223,7 @@ test('linked Google Ads cost stays separate from in-game ad revenue and does not
       assert.deepEqual(body.dimensionFilter, checkedShape.dimensionFilter);
       assert.deepEqual(body.metrics.map(item => item.name), ['advertiserAdCost', 'advertiserAdClicks', 'advertiserAdImpressions']);
       assert.deepEqual(body.dateRanges, [{ startDate: '28daysAgo', endDate: 'yesterday' }]);
-      return report(body, [{ googleAdsCustomerId: '202-097-2848', googleAdsAccountName: 'R Games', googleAdsCampaignId: '111111', googleAdsCampaignName: 'Hunter Tower iOS',
+      return report(body, [{ googleAdsCustomerId: '363-323-8009', googleAdsAccountName: 'R Games', googleAdsCampaignId: '111111', googleAdsCampaignName: 'Hunter Tower iOS',
         advertiserAdCost: '32000', advertiserAdClicks: '120', advertiserAdImpressions: '3000' }], { currencyCode: 'KRW' });
     }
   }, metadata, body => { checkedShape = body; return compatible(body); });
@@ -239,14 +239,14 @@ test('linked Google Ads cost stays separate from in-game ad revenue and does not
   assert.match(costs.notes.join(' '), /ROAS를 계산하지/);
   assert.equal(checkedShape.dateRanges, undefined);
   assert.equal(checkedShape.dimensionFilter.filter.fieldName, 'googleAdsCustomerId');
-  assert.deepEqual(checkedShape.dimensionFilter.filter.inListFilter.values, ['2020972848']);
+  assert.deepEqual(checkedShape.dimensionFilter.filter.inListFilter.values, ['3633238009']);
   assert.match(costs.notes.join(' '), /국가·OS 필터는 적용되지 않습니다/);
 });
 
 test('unlinked zero cost is unavailable while an identified linked campaign can report a real zero', async () => {
   let identified = false;
   mockReports(body => body.dimensions[0]?.name === 'googleAdsCustomerId' ? report(body, [{
-    googleAdsCustomerId: identified ? '2020972848' : '(not set)', googleAdsAccountName: identified ? 'R Games' : '(not set)',
+    googleAdsCustomerId: identified ? '3633238009' : '(not set)', googleAdsAccountName: identified ? 'R Games' : '(not set)',
     googleAdsCampaignId: identified ? '111111' : '(not set)', googleAdsCampaignName: identified ? 'Hunter Tower' : '(not set)',
     advertiserAdCost: '0', advertiserAdClicks: '0', advertiserAdImpressions: '0',
   }]) : undefined);
@@ -262,7 +262,7 @@ test('unlinked zero cost is unavailable while an identified linked campaign can 
 
 test('cost access restrictions never turn hidden spend into zero', async () => {
   mockReports(body => body.dimensions[0]?.name === 'googleAdsCustomerId' ? report(body, [{
-    googleAdsCustomerId: '2020972848', googleAdsAccountName: 'R Games', googleAdsCampaignId: '111111', googleAdsCampaignName: 'Hunter Tower',
+    googleAdsCustomerId: '3633238009', googleAdsAccountName: 'R Games', googleAdsCampaignId: '111111', googleAdsCampaignName: 'Hunter Tower',
     advertiserAdCost: '0', advertiserAdClicks: '100', advertiserAdImpressions: '2000',
   }], { schemaRestrictionResponse: { activeMetricRestrictions: [{ metricName: 'advertiserAdCost' }] } }) : undefined);
   const costs = section(await loadDashboard(token, '543591366', filters), 'ad_costs');
@@ -370,13 +370,13 @@ test('unknown property never borrows Hunter Tower advertising account configurat
 
 test('cost response rows belonging to another account never enter the dashboard', async () => {
   mockReports(body => body.dimensions[0]?.name === 'googleAdsCustomerId' ? report(body, [
-    { googleAdsCustomerId: '9999999999', googleAdsAccountName: 'Other game', googleAdsCampaignId: '222222', googleAdsCampaignName: 'Other campaign', advertiserAdCost: '9000' },
-    { googleAdsCustomerId: '2020972848', googleAdsAccountName: 'R Games', googleAdsCampaignId: '111111', googleAdsCampaignName: 'Hunter Tower', advertiserAdCost: '1000' },
+    { googleAdsCustomerId: '2020972848', googleAdsAccountName: 'Previous account', googleAdsCampaignId: '222222', googleAdsCampaignName: 'Previous campaign', advertiserAdCost: '9000' },
+    { googleAdsCustomerId: '3633238009', googleAdsAccountName: 'R Games', googleAdsCampaignId: '111111', googleAdsCampaignName: 'Hunter Tower', advertiserAdCost: '1000' },
   ]) : undefined);
   const costs = section(await loadDashboard(token, '543591366', filters), 'ad_costs');
   assert.equal(costs.status, 'ready');
   assert.equal(costs.rows.length, 1);
-  assert.equal(costs.rows[0].googleAdsCustomerId, '2020972848');
+  assert.equal(costs.rows[0].googleAdsCustomerId, '3633238009');
   assert.equal(costs.rows[0].advertiserAdCost, 1000);
 });
 

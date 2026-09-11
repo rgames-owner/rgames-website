@@ -57,12 +57,11 @@
 .metric dt { color: #6a614d; font-size: 11px; margin: 0 0 14px; }
 .metric dd { margin: 0; font-size: 24px; line-height: 1.2; font-weight: 900; letter-spacing: -.03em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .tableScroll { overflow-x: auto; border: 1px solid #e5ddc9; border-radius: 10px; max-height: 580px; }
-.table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; }
+.table { width: 100%; border-collapse: collapse; text-align: center; font-size: 12px; }
 .table th { background: #f3eddf; color: #6a6049; padding: 12px 14px; font-size: 11px; font-weight: 700; border-bottom: 1px solid #e5ddc9; white-space: nowrap; position: sticky; top: 0; }
 .table td { padding: 12px 14px; border-bottom: 1px solid #eee8da; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .table tbody tr:last-child td { border-bottom: 0; }
 .table tbody tr:hover { background: #faf5e7; }
-.numeric { text-align: right; }
 .sectionEmpty { padding: 24px; border-radius: 9px; background: #f7f2e6; font-size: 12px; color: #6a614d; line-height: 1.8; }
 .notes { list-style: none; margin: 14px 0 0; padding: 0; color: #746b55; font-size: 11px; line-height: 1.8; }
 .notes li + li { margin-top: 4px; }

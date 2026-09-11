@@ -27,7 +27,6 @@ export interface Dict {
   htGenre: string;
   htDesc: string;
   getItOn: string;
-  comingSoon: string;
   upBadge: string;
   upTitle: string;
   upDesc: string;
@@ -62,6 +61,7 @@ export const CONTACT = {
   telIntl: '+82-10-9539-9513',
   googlePlay: 'https://play.google.com/store/apps/details?id=com.rgames.huntertower',
   oneStore: 'https://m.onestore.co.kr/v2/ko-kr/app/0001006140',
+  appStore: 'https://apps.apple.com/app/hunter-tower-offline-idle-rpg/id6791432040',
 };
 
 export const SCREENSHOTS: Record<Lang, string[]> = {
@@ -107,7 +107,6 @@ export const DICT: Record<Lang, Dict> = {
     htDesc:
       '헌터들이 자동으로 탑을 오르며 몬스터를 물리치는 2D 방치형 타워 클라이밍 RPG. 승급과 유물, 프레스티지로 매 회차가 더 빠르고 강해집니다. 오프라인 보상으로 자리를 비워도 성장은 계속됩니다.',
     getItOn: '다운로드',
-    comingSoon: '심사 준비 중',
     upBadge: 'COMING SOON',
     upTitle: '차기 프로젝트 — 부화 준비 중',
     upDesc:
@@ -244,7 +243,6 @@ export const DICT: Record<Lang, Dict> = {
     htDesc:
       'A 2D idle tower-climbing RPG where hunters automatically climb floors and defeat monsters. Promote hunters, collect relics, and Succession to make every run faster and stronger. Offline rewards keep you growing while you are away.',
     getItOn: 'GET IT ON',
-    comingSoon: 'In review',
     upBadge: 'COMING SOON',
     upTitle: 'Next project — incubating',
     upDesc:

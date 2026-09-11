@@ -9,8 +9,9 @@ const CONCURRENCY = 3;
 const TIMEOUT_MS = 25_000;
 const HUNTER_TOWER_PROPERTY_ID = '543591366';
 const HUNTER_TOWER_STREAM_IDS = ['15171192886', '15315772233'];
-// Verified in GA4 Google Ads links; this account has been linked since 2026-06-30.
-const HUNTER_TOWER_GOOGLE_ADS_CUSTOMER_ID = '2020972848';
+// Linked in Firebase/GA4 as R Games on 2026-09-11. Replaces 202-097-2848.
+const HUNTER_TOWER_GOOGLE_ADS_CUSTOMER_ID = '3633238009';
+const HUNTER_TOWER_GOOGLE_ADS_CUSTOMER_ID_LABEL = '363-323-8009';
 
 type Column = ReportSection['columns'][number];
 type DataRow = ReportSection['rows'][number];
@@ -418,14 +419,14 @@ function markUnverifiedRevenue(sections: ReportSection[]): void {
 // https://developers.google.com/analytics/devguides/reporting/data/v1/rest/v1beta/properties/checkCompatibility
 const googleAdsCostDefinition: Definition = {
   id: 'ad_costs', title: 'Google Ads 집행 비용',
-  description: 'Google Ads 202-097-2848 계정·캠페인 전체의 집행 비용·클릭·노출입니다. 위 날짜 범위만 적용합니다.',
+  description: `Google Ads ${HUNTER_TOWER_GOOGLE_ADS_CUSTOMER_ID_LABEL} 계정·캠페인 전체의 집행 비용·클릭·노출입니다. 위 날짜 범위만 적용합니다.`,
   dimensions: ['googleAdsCustomerId', 'googleAdsAccountName', 'googleAdsCampaignId', 'googleAdsCampaignName'],
   metrics: ['advertiserAdCost', 'advertiserAdClicks', 'advertiserAdImpressions'],
   columns: [dim('googleAdsCustomerId', '광고 계정 ID'), dim('googleAdsAccountName', '광고 계정'),
     dim('googleAdsCampaignId', '캠페인 ID'), dim('googleAdsCampaignName', '캠페인'),
     metric('advertiserAdCost', '집행 비용', 'currency'), metric('advertiserAdClicks', '광고 클릭'), metric('advertiserAdImpressions', '광고 노출')],
   notes: ['광고비는 연결된 계정·캠페인 전체 기준이며 위 국가·OS 필터는 적용되지 않습니다. 앱 스트림별 비용도 아닙니다.',
-    '조회 계정은 GA4 연결이 확인된 202-097-2848입니다. 게임 내 광고 수익과 별도로 해석하세요.',
+    `조회 계정은 GA4 연결이 확인된 ${HUNTER_TOWER_GOOGLE_ADS_CUSTOMER_ID_LABEL}입니다. 게임 내 광고 수익과 별도로 해석하세요.`,
     '설치 전환 연결이 확인되지 않아 CPI를 계산하지 않습니다. 전체 신규 사용자로 광고비를 나누지 않습니다.',
     '매출 귀속 범위·집계 기간 연결이 확인되지 않아 ROAS를 계산하지 않습니다. GA4 처리 지연과 귀속 방식으로 Google Ads 원본 보고서와 차이가 날 수 있습니다.'],
 };

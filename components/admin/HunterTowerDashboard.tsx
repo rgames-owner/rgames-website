@@ -96,7 +96,7 @@ function Report({ section, currency }: { section: ReportSection; currency: strin
                 {section.rows.map((row, index) => (
                   <tr key={index}>
                     {section.columns.map((column) => (
-                      <td key={column.key} className={column.format ? styles.numeric : undefined}>
+                      <td key={column.key}>
                         {formatValue(row[column.key], column.format, currency)}
                       </td>
                     ))}

@@ -75,10 +75,10 @@ export default function Home() {
               <small>{t.getItOn}</small>
               <b>ONE store</b>
             </a>
-            <div className="store-btn disabled">
-              <small>{t.comingSoon}</small>
+            <a className="store-btn" href={CONTACT.appStore} target="_blank" rel="noopener noreferrer">
+              <small>{t.getItOn}</small>
               <b>App Store</b>
-            </div>
+            </a>
           </div>
         </div>
 
