@@ -1,6 +1,6 @@
 /* AUTO-GENERATED — do not edit by hand.
  * Run: npm run sync:patch-notes
- * Generated: 2026-09-10T15:03:52.525Z
+ * Generated: 2026-10-05T15:54:40.545Z
  * Sources:
  *   ../Hunter_Tower/Assets/Project/Localization/Tables/UI.csv
  *   ../Hunter_Tower/Assets/Project/ScriptableObjects/Data/PatchNoteTable.asset
@@ -10,6 +10,20 @@ import type { GamePatchNotes } from '@/lib/games/types';
 export const hunterTowerPatchNotes: GamePatchNotes = {
   title: { ko: "업데이트 내역", en: "Update History" },
   entries: [
+    {
+      version: "1.1.7",
+      body: {
+        ko: "• 엘릭서 던전을 추가했습니다. 도전 탭의 경쟁전에서 타이밍 게이지에 맞춰 엘릭서 가마솥을 공격해 엘릭서를 얻고 주간 순위를 겨루세요.\n• 신규 유물 9종을 추가했습니다. 재등반 층 도약, 보스 피해, 계승 시 스킬 레벨 유지 등 새 효과를 만나보세요. 도감의 유물 수집 보상 단계도 +300까지 늘렸습니다.\n• 채팅에 언어별 채널을 추가했습니다. 업데이트 후 처음 열면 게임 언어 채널로 이동하며, 전체 채널에서는 모든 유저와 대화할 수 있습니다.\n• 튜토리얼이 할 일과 보상을 화면 위쪽에 바로 보여 주도록 바꾸고, 가이드를 한 장씩 넘겨 보는 카드로 개편했습니다.\n• 유물 상세, 계승 확인, 계승 시작층 선택 화면을 새롭게 디자인했습니다. 헌터·계승자 공격 이펙트를 교체하고 원정대 파견 연출을 추가했습니다.\n• 안드로이드 뒤로가기 버튼이 열린 창부터 닫습니다. 일괄 장착·전체 합성, 일일 던전 엘릭서 입장·소탕, 레전드 선택상자는 확인 후 진행됩니다.\n• 스마트 자동 강화에서 헌터 해금을 켜도 강화를 계속하며 해금 골드를 적립하고, 해금이 가까울 때만 잠시 강화를 멈추고 골드를 저축합니다.\n• 일부 숫자가 1 작게 보이던 문제, 긴 번역 문구가 잘리던 문제, 일부 iOS 기기에서 앱이 종료되던 문제, 광고 관련 문제 등 여러 문제를 수정했습니다.",
+        en: "• Added the Elixir Dungeon. In Competitive on the Challenge tab, attack the Elixir Cauldron in time with the timing gauge to earn Elixir and compete in the weekly ranking.\n• Added 9 new relics with effects like floor jumps while re-climbing, boss damage and keeping skill levels on Succession. Relic Collection Reward Steps in the Codex now go up to +300.\n• Added language channels to chat. After the update, chat first opens in your game language's channel, and the Global channel lets you talk with everyone.\n• The tutorial now shows your current task and reward at the top of the screen, and guides are now cards you flip through page by page.\n• Redesigned the Relic Details, Succession confirmation and start floor selection screens. Refreshed hunter and successor attack effects and added an Expedition dispatch animation.\n• The Android back button now closes open windows first. Auto Equip, Bulk Synthesis, Daily Dungeon Elixir entries and sweeps, and the Legend Choice Box now ask for confirmation.\n• With hunter unlocks on, Smart Auto-Upgrade keeps upgrading while setting Gold aside for the next unlock, and only pauses briefly to save Gold when an unlock is close.\n• Fixed some numbers showing 1 less than the actual value, long translated text being cut off, the app closing on some iOS devices, ad-related issues and more.",
+      },
+    },
+    {
+      version: "1.1.6",
+      body: {
+        ko: "• 일일 던전을 추가했습니다. 요일별 던전에서 헌터를 편성하고 영혼석을 획득하세요.\n• 원정대를 추가했습니다. 헌터를 파견해 의뢰를 완료하고 원정대 보상을 획득하세요.\n• 도감을 확장했습니다. 헌터·계승자·유물·장비 정보와 수집 보상, 능력치 계산식을 확인할 수 있습니다.\n• 월드 채팅을 추가했습니다. 채널을 선택해 대화하고 차단·신고 기능을 이용할 수 있습니다.\n• 장비 강화·돌파와 특수옵션을 추가했습니다. 프리셋으로 콘텐츠별 장비 옵션을 설정할 수 있습니다.\n• 추석 이벤트가 시작됩니다. 몬스터를 처치해 삼색 송편을 모으고 송편 장터에서 보상으로 교환하세요.\n• 도감 골드 보너스와 일일 던전 등 성장 밸런스를 조정했습니다.\n• 주요 화면과 조작 편의성을 개선하고 저장·보상 처리 등 여러 문제를 수정했습니다.",
+        en: "• Added Daily Dungeons. Form hunter lineups for each day's dungeon and earn Spirit Stones.\n• Added Expeditions. Send hunters on missions and earn expedition rewards.\n• Expanded the Codex with hunter, successor, relic and equipment details, collection rewards and stat formulas.\n• Added world chat with channel selection, blocking and reporting.\n• Added equipment enhancement, breakthroughs and special options. Use presets to set equipment options for each type of content.\n• The Chuseok event is here! Defeat monsters to collect three colors of songpyeon and exchange them for rewards at the Songpyeon Market.\n• Adjusted progression balance, including Codex gold bonuses and Daily Dungeons.\n• Improved key screens and controls, and fixed issues with saving, reward processing and more.",
+      },
+    },
     {
       version: "1.1.5",
       body: {
